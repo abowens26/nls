@@ -1,0 +1,19 @@
+
+.anger-container {
+    display: flex;
+    justify-content: center;
+}
+
+.anger-section {
+    width: 50%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.coping {
+    padding: 15px 0px 15px 0px;
+    border-radius: 20px;
+    background-color: rgba(185, 229, 230, 1);
+}

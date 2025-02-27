@@ -1,0 +1,30 @@
+
+h3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.question {
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+.back-dashboard {
+    background-color: rgba(161, 202, 246, 1);
+    padding: 10px;
+    margin-top: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.back-dashboard:hover {
+    background-color:  rgb(230, 248, 248);
+    cursor: pointer;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+}

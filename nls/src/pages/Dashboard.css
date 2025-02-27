@@ -1,0 +1,56 @@
+.test-container {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    background-color: rgba(159, 199, 249, 1);
+    padding: 50px;
+    border-radius: 20px;
+    border: 4px solid black;
+    display: flex;
+    flex-direction: row;
+
+}
+ 
+.learning-statement {
+    margin-top: 50px;
+    justify-content: center;
+    display: flex;
+    
+
+}
+h3 {
+    font-size: 40px;
+}
+
+.social {
+    height: 118px;
+    width: 224px;
+    margin-right: 10px;
+}
+
+img {
+    border: 4px solid black;
+    border-radius: 20px;
+}
+
+.bottom-corner {
+    float: right;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+a {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    
+}
+

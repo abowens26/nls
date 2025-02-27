@@ -1,0 +1,20 @@
+.header {
+    background-color: rgba(184, 228, 229, 1);
+    border-bottom: 2px solid black;
+    
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.logout-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+   margin-right: 20px;
+   margin-bottom: 20px;
+    
+}

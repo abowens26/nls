@@ -1,0 +1,58 @@
+
+.homebody {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:url("C:\Users\aliis\bb\src\Components\Assets\Icon\5693812719358347234.png");
+    background-position: center;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-size: 100%;
+}
+.login-container {
+    display: flex;
+    background-color: rgba(185, 229, 230, 1);
+    padding: 50px;
+    flex-direction: column;
+    border: 3px solid;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 100%;
+
+    
+    
+    
+}
+
+
+
+.login-title {
+    text-align: center;
+}
+.login-field {
+    width: 100%;
+    padding: 15px 0 20px 15px;
+    margin: 10px 0 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    
+
+}
+
+.submit-btn {
+    margin-top: auto;
+    padding: 15px 0 20px 15px;
+    border-radius: 20px;
+    background-color: rgba(161, 202, 246, 1);
+    
+}
+
+.submit-btn:hover{
+    background-color:  rgb(230, 248, 248);
+    cursor: pointer;
+}
+
+.signup {
+    text-align: center;
+}
