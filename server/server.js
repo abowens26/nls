@@ -4,6 +4,8 @@ const cors = require('cors')
 
 const app = express();
 
+import * as dotenv from 'dotenv'
+dotenv.config();
 
 const answerSchema = new mongoose.Schema({
     score: number
@@ -11,4 +13,4 @@ const answerSchema = new mongoose.Schema({
 
 })
 
-mongoose.connect('mongodb+srv://alibowens3626:8j3xB7NPKV6IViph@cluster0.qpil7.mongodb.net/')
+mongoose.connect(process.env.URI)

@@ -9,12 +9,34 @@
     justify-content: center;
 }
 
+.email-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+   margin-right: 20px;
+   margin-bottom: 10px;
+    
+}
+
 .logout-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
    margin-right: 20px;
-   margin-bottom: 20px;
+   margin-bottom: 10px;
     
+}
+
+.logout {
+    display: none;
+    background-color:  rgba(159, 199, 249, 1);
+    padding: 20px;
+    border: solid 2px black;
+    border-radius: 20px;
+}
+
+.show {
+    display: block;
 }

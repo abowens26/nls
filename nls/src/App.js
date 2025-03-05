@@ -8,6 +8,7 @@ import Test from './pages/sstest';
 import Resources from './pages/Resources';
 import Stressed from './pages/Stressed';
 import Wrapper from './pages/Wrapper.jsx';
+import Amtest from './pages/amtest.js';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
          <Route path="/Test" element={<Wrapper><Test /></Wrapper>} />
          <Route path="/Resources" element={<Wrapper><Resources /></Wrapper>} />
          <Route path="/Stressed" element={<Wrapper><Stressed /></Wrapper>} />
-         
+         <Route path="/AmTest" element={<Wrapper><Amtest /></Wrapper>} />
 
 
          </Routes>

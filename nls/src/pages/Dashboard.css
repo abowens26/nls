@@ -1,15 +1,17 @@
 .test-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 section {
     background-color: rgba(159, 199, 249, 1);
-    padding: 50px;
+    padding: 40px;
     border-radius: 20px;
     border: 4px solid black;
     display: flex;
     flex-direction: row;
+    margin: auto;
 
 }
  
@@ -26,7 +28,7 @@ h3 {
 
 .social {
     height: 118px;
-    width: 224px;
+    width: 220px;
     margin-right: 10px;
 }
 
@@ -39,6 +41,7 @@ img {
     float: right;
     display: flex;
     align-items: flex-end;
+    flex-direction: row;
 
 }
 
@@ -52,5 +55,67 @@ a:hover {
     text-decoration: underline;
     font-weight: bold;
     
+}
+.show-recent {
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+}
+
+.show-recent:hover {
+   text-decoration: underline;
+}
+.recent {
+    display: none;
+    margin-right: 10px;
+    font-weight: bold;
+
+    
+}
+
+.score-container {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    right: 150px;
+    bottom: 5px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.show {
+    display: block;
+}
+
+.test-link {
+    position: relative;
+    right: 8px;
+    top: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.test-link:hover {
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.section-2{
+    margin-top: 20px;
+}
+
+.line-graph {
+    width: 50%;
+    height: 50%;
+    background-color: aliceblue;
+    padding: 10px;
+    border: solid black 2px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 10px;
+  
 }
 
