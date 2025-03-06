@@ -41,7 +41,7 @@ export default [
         option2:"Blue",
         option3:"Orange",
         option4:"Green",
-        Answer: "B"
+        Answer: "B",
 
     }
 

@@ -26,12 +26,18 @@ const positiveAffirmation = ["Great Job!", "Keep Going!", "Better Luck Next Time
 
 
     const submitQuiz = () => {
+
+        let newScore=score;
+
+
         if(questionbank2[currentQuestion].Answer === optionChosen) {
-            setScore(score + 1);
-           
+            newScore = score + 1
+            setScore(newScore);
         }
 
-       sessionStorage.setItem("Amfinalscore", (finalScore + 20)); 
+        const finalScore = (newScore/ questionbank2.length) * 100
+
+       sessionStorage.setItem("Amfinalscore", (finalScore)); 
         document.getElementById("submit").hidden = true;
         document.getElementById("option1").hidden = true;
         document.getElementById("option2").hidden = true;

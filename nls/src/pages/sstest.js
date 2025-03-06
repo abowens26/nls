@@ -8,7 +8,7 @@ import questionbank from "../Components/Assets/questionbank";
 function Sstest() {
 
 const [score, setScore] = useState(0)
-const finalScore = (score / questionbank.length) * 100
+ const finalScore = (score / questionbank.length) * 100
 
 
     const[currentQuestion, setCurrentQuestion] = useState(0)
@@ -23,14 +23,19 @@ const finalScore = (score / questionbank.length) * 100
         }
         setCurrentQuestion(currentQuestion + 1);
     }
-
+   
 
     const submitQuiz = () => {
+        let newScore=score;
+        
         if(questionbank[currentQuestion].Answer === optionChosen) {
-            setScore(score + 1);
-           
-        }
-        sessionStorage.setItem("finalScore", (finalScore + 20)); 
+            newScore = score + 1
+            setScore(newScore);    
+        } 
+
+        const finalScore = (newScore/ questionbank.length) * 100
+
+        sessionStorage.setItem("finalScore", finalScore) 
         document.getElementById("submit").hidden = true;
         document.getElementById("option1").hidden = true;
         document.getElementById("option2").hidden = true;

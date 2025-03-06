@@ -60,10 +60,9 @@ function Dashboard() {
             <p id="am-recent" class="recent"> {amRecentscore}%</p>  
            </div>
 
-            </section>
-            </div>
-            <div class="line-graph">
-                <Line 
+            </section>   
+             <div class="line-graph">
+                <Bar 
                
                 data={{
                     labels: ["Social Skills Test", "Anger Management Test"],
@@ -77,6 +76,8 @@ function Dashboard() {
             
             /> 
             </div>
+            </div>
+        
             
              
             </div>
