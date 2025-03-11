@@ -9,6 +9,7 @@ import Resources from './pages/Resources';
 import Stressed from './pages/Stressed';
 import Wrapper from './pages/Wrapper.jsx';
 import Amtest from './pages/amtest.js';
+import GImodTest from './pages/GImodtest.js';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
          <Route path="/Resources" element={<Wrapper><Resources /></Wrapper>} />
          <Route path="/Stressed" element={<Wrapper><Stressed /></Wrapper>} />
          <Route path="/AmTest" element={<Wrapper><Amtest /></Wrapper>} />
+         <Route path="/GITest" element={<Wrapper><GImodTest /> </Wrapper>} />
 
 
          </Routes>

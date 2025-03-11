@@ -26,14 +26,14 @@ const [score, setScore] = useState(0)
    
 
     const submitQuiz = () => {
-        let newScore=score;
+        let newtestScore=score;
         
         if(questionbank[currentQuestion].Answer === optionChosen) {
-            newScore = score + 1
-            setScore(newScore);    
+            newtestScore = score + 1
+            setScore(newtestScore);    
         } 
 
-        const finalScore = (newScore/ questionbank.length) * 100
+        const finalScore = (newtestScore/ questionbank.length) * 100
 
         sessionStorage.setItem("finalScore", finalScore) 
         document.getElementById("submit").hidden = true;
