@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./Login.css"
 import supabase from "../helper/supabaseClient";
 import { useNavigate } from "react-router-dom";
+import icon from "../Components/Assets/Icon/5693812719358347234.png"
 
 
 

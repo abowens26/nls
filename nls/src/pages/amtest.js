@@ -105,7 +105,7 @@ function Amtest() {
 
 
         try {
-            await fetch("http://localhost:4001/api/score", {
+            await fetch(process.env.BASE_URL, {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
