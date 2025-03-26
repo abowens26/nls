@@ -5,9 +5,10 @@
     text-align: center;
 }
 
-.question {
+.amquestion {
     margin-left: 25px;
     margin-bottom: 25px;
+    display: none;
 }
 
 .back-dashboard {
@@ -77,4 +78,123 @@
 
 .submit:disabled {
     display: none;
+}
+
+#amnext-btn {
+    display: none;
+}
+
+.a-title{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: -50px;
+}
+
+#am-title {
+    margin-top: 100px;
+}
+
+.back {
+    background-color: rgb(189, 186, 186)
+}
+
+
+
+@media (max-width: 768px) {
+    .s-title {
+        font-size: medium;
+        margin-top: auto;
+    }
+
+    #content {
+        font-size:small;
+    }
+
+    .back-dashboard {
+        font-size: xx-small;
+        padding: 10px;
+    }
+
+    .next, .submit {
+        padding: 8px, 16px;
+        font-size: small;
+
+    }
+
+    .ppt {
+        height: 200px;
+        width: 350px;
+    }
+
+    .quiz {
+        margin-top: auto;
+    }
+    
+    .option {
+        
+        font-size: small;
+        margin: 5px 15px;
+    }
+
+    #start {
+        font-size: medium;
+    }
+    
+
+
+
+    
+}
+
+@media (max-width: 480px) {
+    .test-title {
+        margin: auto;
+    }
+    .a-title {
+        font-size: medium;
+        margin-top: auto;
+    }
+
+    #content {
+        font-size:small;
+    }
+
+    .back-dashboard {
+        padding: 10px;
+    }
+
+    .next, .submit {
+        padding: 8px, 16px;
+        font-size: small;
+
+    }
+
+    .ppt {
+        height: 200px;
+        width: 350px;
+    }
+
+    .quiz {
+        margin-top: auto;
+    }
+    
+    .option {
+        
+        font-size: small;
+        margin: 5px 15px;
+    }
+
+    .question {
+        margin: auto;
+    }
+
+    #start {
+        font-size: medium;
+    }
+    
+
+    
+
+    
 }

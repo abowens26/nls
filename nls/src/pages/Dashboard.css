@@ -9,7 +9,7 @@ section {
     padding: 50px;
     border-radius: 20px;
     height: 100px;
-    width: 1000px;
+    width: 950px;
     border: 4px solid black;
     display: flex;
     flex-direction: row;
@@ -109,23 +109,25 @@ a:hover {
 
 .section-2{
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .line-graph {
-    width: 50%;
-    height: 50%;
+    width:  100vh;
+    height: 60vh;
     background-color: aliceblue;
-    padding: 10px;
+    padding: 30px;
     border: solid black 2px;
     border-radius: 20px;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   
 }
 
 
 .am {
-    right: -100px;
+    right: -130px;
 }
 
 .amc {
@@ -133,9 +135,156 @@ a:hover {
 }
 
 .ss {
-    right: -170px;
+    right: -200px;
 }
 
 .ssc{
     right: -105px;
+}
+
+.gic{
+    right: 35px;
+
+}
+
+
+@media (max-width: 768px) {
+
+    .learning-statement {
+        font-size: medium;
+    }
+    section {
+    height: 100px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+        
+    }
+
+    .mod-title {
+        font-size: small;
+        margin-top: -19px;
+
+    }
+
+    .social {
+        height: 75px;
+        width: 75px;
+        border-radius: 20px;
+    }
+
+    .test-link {
+        font-size: small;
+        right: 0px;
+        top: 0px;
+    }
+
+    .test-link:hover {
+        text-decoration: underline;
+    }
+
+
+    .show-recent {
+        font-size: small;
+    }
+    .recent {
+        font-size: small;
+    }
+
+    .am {
+        right: 15px;
+    }
+    
+    .amc {
+        top: -30px;
+        right: 0px;
+    }
+    
+    .ss {
+        right: 15px;
+    }
+    
+    .ssc{
+        right: 0px;
+        top: -30px
+    }
+    
+    .gp {
+        right: 25px;
+    }
+    .gic{
+        right: -20px;
+        top: -30px;
+    
+    }
+    
+    .line-graph {
+        width: 40vh;
+        height: 40vh;
+    }
+
+    
+
+
+    
+}
+
+@media (max-width: 480px) {
+    section {
+    height: 100px;
+    width: 50%
+
+        
+    }
+
+    .mod-title {
+        font-size: small;
+        margin-top: -19px;
+
+    }
+
+    .show-recent {
+        cursor: pointer;
+        margin-right: 10px;
+        display: flex;
+        align-items: flex-start
+    }
+
+    
+.am {
+    right: 15px;
+}
+
+.amc {
+    top: -30px;
+    right: 0px;
+}
+
+.ss {
+    right: 15px;
+}
+
+.ssc{
+    right: 0px;
+    top: -30px
+}
+
+.gp {
+    right: 25px;
+}
+.gic{
+    right: -20px;
+    top: -30px;
+
+}
+
+.line-graph {
+    width: 40vh;
+    height: 40vh;
+    padding: 10px;
+}
+
+
+    
 }

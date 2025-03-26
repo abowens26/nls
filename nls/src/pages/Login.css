@@ -56,3 +56,67 @@
 .signup {
     text-align: center;
 }
+
+
+
+@media (max-width: 768px) {
+    .login-container {
+        display: flex;
+        background-color: rgba(185, 229, 230, 1);
+        padding: 50px;
+        flex-direction: column;
+        border: 3px solid;
+        border-radius: 20px;
+        max-width: 400px;
+        width: 100%;
+    
+        
+        
+        
+    }
+
+
+    .login-field {
+        width: 100%;
+        padding: 15px 0 20px 15px;
+        margin: 10px 0 10px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        
+    
+    }
+    
+    
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        display: flex;
+        background-color: rgba(185, 229, 230, 1);
+        padding: 50px;
+        flex-direction: column;
+        border: 3px solid;
+        border-radius: 20px;
+        max-width: 400px;
+        width: 40%;
+        height: 400px;
+
+    
+        
+        
+        
+    }
+
+    .login-field {
+        width: 100%;
+        padding: 15px 0 20px 15px;
+        margin: 10px 0 10px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        
+    
+    }
+    
+}

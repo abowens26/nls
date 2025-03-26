@@ -11,11 +11,9 @@ import supabase from "../helper/supabaseClient";
 
     useEffect(() => {
         const fetchUser = async () => {
-            const { data, error } = await supabase.auth.getUser();
+            const { data} = await supabase.auth.getUser();
             if (data?.user) {
                 setEmail(data.user.email);
-            } else {
-                console.error("Error fetching user:", error);
             }
         };
         fetchUser();
@@ -41,7 +39,7 @@ import supabase from "../helper/supabaseClient";
     return (
         <div class="header">
             <div class="title">
-                <h2>NLS Psychological Services</h2>
+                <h2 class="psy-title">NLS Psychological Services</h2>
             </div>
 
 

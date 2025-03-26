@@ -1,21 +1,21 @@
 
 export default [
     {
-        question: "What makes you angry?",
-        option1: "Words",
-        option2:"The way you stand",
-        option3:"your behavior",
+        question: "What is the first step in managing anger effectively?",
+        option1: "Yelling to release frustration",
+        option2:"Recognizing and Acknowledging your anger",
+        option3:"Ignoriong the anger",
         option4:"All of the above",
         Answer: "A",
 
     },
     {
-        question: "Why are you angry?",
-        option1: "profanity",
-        option2:"The way you stand",
-        option3:"your behavior",
+        question: "Which of the following is a healthy way to express anger?",
+        option1: "Suppressing it and pretending nothing happened",
+        option2:"Lashing out verbally or physically",
+        option3:"Expressing it assertively without aggression",
         option4:"All of the above",
-        Answer: "D",
+        Answer: "C",
     },
     {
         question: "When dealing with somone who is angry, how do you respond?",
@@ -27,20 +27,20 @@ export default [
 
     },
     {
-        question: "What is the worst NFL Team?",
-        option1: "Bengals",
-        option2:"Bills",
-        option3:"Eagles",
-        option4:"Steelers",
-        Answer: "B",
+        question: "What could you do to help control your anger?",
+        option1: "Deep Breathing",
+        option2:"Exercise",
+        option3:"Express yourself appropriatley",
+        option4:"All of the above",
+        Answer: "D",
 
     },
     {
-        question: "What is the worst video game?",
-        option1: "Madden",
-        option2:"2k",
-        option3:"CFB25",
-        option4:"FIFA",
+        question: "What is a common physical response to anger?",
+        option1: "Increased stress levels and heart rate",
+        option2:"Lower heart rate",
+        option3:"A decrease in energy",
+        option4:"Answers A and C",
         Answer: "A"
 
     }

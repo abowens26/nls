@@ -4,8 +4,33 @@ nav {
     background-color: rgba(159, 199, 249, 1);
     border-bottom: 2px solid black;
     padding: 20px;
+    font-weight: bold;
 }
 
 .nav {
     margin: auto 
+}
+
+
+
+
+@media (max-width: 768px) {
+    nav {
+    display: flex;
+    flex-direction: column;
+    font-size: smaller
+        
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        font-size: smaller
+            
+        }
+    
 }

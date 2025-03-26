@@ -40,3 +40,34 @@
 .show {
     display: block;
 }
+
+
+
+
+@media (max-width: 768px) {
+    .psy-title {
+        font-size: medium;
+    }
+
+    .email {
+        font-size: small;
+    }
+
+    .logout {
+        font-size: small;
+    }
+}
+
+@media (max-width: 480px) {
+    .psy-title {
+        font-size: medium;
+    }
+
+    .email {
+        font-size: small;
+    }
+
+    .logout {
+        font-size: small;
+    }
+}

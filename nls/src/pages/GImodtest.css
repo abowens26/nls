@@ -6,7 +6,7 @@
 }
 
 
-.gi-question {
+.question {
     margin-left: 25px;
     margin-bottom: 25px;
     display: none
@@ -31,11 +31,10 @@
     box-shadow: 10px 10px 10px black;
 }
 
-.gi-grid {
+.grid {
     display: flex;
     justify-content: flex-end;
     margin-right: 25px;
-    display: none;
 }
 
 
@@ -43,8 +42,8 @@
 .next {
     padding: 15px 30px 15px 30px;
     background-color:  rgb(189, 186, 186);
-    display: flex;
-    flex-direction: flex-end;
+    display: none;
+    
 }
 
 .next:hover {
@@ -89,6 +88,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #start {
@@ -99,17 +99,147 @@
     display: flex;
     text-align: center;
     justify-content: center;
+    margin-top: 10px;
 }
 
 
-#next {
+#next-btn {
  display: none;
 }
 
-#next:disabled {
+#next-btn:disabled {
     display: none;
 }
 
 #startquiz:disabled {
     display: none;
+}
+
+.ppt {
+    display: none;
+    border: 10px solid black;
+    border-radius: 20px;
+    
+}
+
+.quiz {
+    display: none;
+    margin-bottom: 10px;
+}
+
+#content {
+    margin-top: -20px;
+}
+
+.t-title {
+    margin-top: -50px;
+}
+
+#mod-title {
+    margin-top: 100px;
+}
+
+.back {
+    background-color: rgb(189, 186, 186)
+}
+
+
+
+
+@media (max-width: 768px) {
+    .t-title {
+        font-size: medium;
+        margin-top: auto;
+    }
+
+    #content {
+        font-size:small;
+    }
+
+    .back-dashboard {
+        font-size: small;
+        padding: 10px;
+    }
+
+    .next, .submit {
+        padding: 8px, 16px;
+        font-size: small;
+
+    }
+
+    .ppt {
+        height: 200px;
+        width: 350px;
+    }
+
+    .quiz {
+        margin-top: auto;
+    }
+    
+    .option {
+        
+        font-size: small;
+        margin: 5px 15px;
+    }
+
+
+    #start {
+        font-size: medium;
+    }
+    
+
+
+
+    
+}
+
+@media (max-width: 480px) {
+    .t-title {
+        font-size: medium;
+        margin-top: auto;
+    }
+
+    #content {
+        font-size:small;
+    }
+
+    .back-dashboard {
+        font-size: small;
+        padding: 10px;
+    }
+
+    .next, .submit {
+        padding: 8px, 16px;
+        font-size: small;
+
+    }
+
+    .ppt {
+        height: 200px;
+        width: 350px;
+    }
+
+    .quiz {
+        margin-top: auto;
+    }
+    
+    .option {
+        
+        font-size: small;
+        margin: 5px 15px;
+    }
+
+    .question {
+        margin: auto;
+    }
+
+
+    #start {
+        font-size: medium;
+    }
+    
+
+    
+
+    
 }

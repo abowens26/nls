@@ -5,7 +5,6 @@ import supabase from "../helper/supabaseClient";
 
 
 function SignUp() {
-
     const [emailSignup, setEmailSignup] = useState('')
     const [passwordSignup, setPasswordSignup] = useState('');
     const [message, setMessage] = useState("");
@@ -16,7 +15,6 @@ function SignUp() {
         setMessage("")
         
         const {data, error} = await supabase.auth.signUp({
-
             email: emailSignup,
             password: passwordSignup,
         });
