@@ -15,6 +15,10 @@ function Login() {
     const[loginStatus, setLoginStatus] = useState('');
     const navigate = useNavigate();
     
+
+
+    
+    /*Source: https://github.com/arpanneupane19/react-supabase-auth */
     const handleSubmit = async(event) => {
         event.preventDefault();
         setLoginStatus("")

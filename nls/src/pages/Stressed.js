@@ -4,6 +4,7 @@ import Nav from "../Components/Nav";
 import "./Stressed.css"
 
 
+
 function Stressed () {
     
     function dropAnger() {

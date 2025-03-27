@@ -61,6 +61,8 @@ const startModule = () => {
         if(questionbank3[currentQuestion].Answer === optionChosen) {
             setScore(score + 1);
         }
+
+
         setCurrentQuestion(currentQuestion + 1);
     }
 

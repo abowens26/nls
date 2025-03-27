@@ -58,12 +58,13 @@ function Dashboard() {
                 <p></p>
                 <h3 class="mod-title">G.R.O.U.P Introduction</h3>
                 
-                <a class="test-link gp" href="/GITest">Start Module!</a> 
-                 
+               
+            <a class="test-link gp" href="/GITest"> <button class="start">Start Module!</button></a>      
               
           
-           <div class="score-container gic">
-            <p class="show-recent" onClick={GiRecentScore}>Show Recent Score</p>
+           <div class="score-container gic"> 
+            
+            <p class="show-recent" onClick={GiRecentScore}><button class="start">Show Recent Score</button></p>
             <p id="gi-recent" class="recent"> {giRecentScore}%</p>  
            </div>
 
@@ -75,12 +76,12 @@ function Dashboard() {
                 <p></p>
                 <h3 class="mod-title">Social Skills Test</h3>
                 
-                <a class="test-link ss" href="/Test">Start Module!</a> 
+                <a class="test-link ss" href="/Test"> <button class="start">Start Module!</button></a> 
                  
               
           
            <div class="score-container ssc">
-            <p class="show-recent" onClick={ShowRecentScore}>Show Recent Score</p>
+            <p class="show-recent" onClick={ShowRecentScore}> <button class="start">Show Recent Score</button></p>
             <p id="recent-score" class="recent"> {recentScore}%</p>  
            </div>
                 
@@ -94,12 +95,12 @@ function Dashboard() {
                 <p></p>
                 <h3 class="mod-title">Anger Management</h3>
                 
-                <a class="test-link am" href="/AmTest">Start Module!</a> 
+                <a class="test-link am" href="/AmTest"><button class="start">Start Module!</button></a> 
                  
               
           
            <div class="score-container amc">
-            <p class="show-recent" onClick={AmRecentScore}>Show Recent Score</p>
+            <p class="show-recent" onClick={AmRecentScore}> <button class="start">Show Recent Score</button></p>
             <p id="am-recent" class="recent"> {amRecentscore}%</p>  
            </div>
 

@@ -81,6 +81,7 @@ a:hover {
 .score-container {
     display: flex;
     align-items: flex-end;
+    flex-direction: row;
     justify-content: flex-end;
     text-align: flex-end;
     position: relative;
@@ -135,16 +136,32 @@ a:hover {
 }
 
 .ss {
-    right: -200px;
+    right: -190px;
 }
 
 .ssc{
-    right: -105px;
+    right: -95px;
 }
 
 .gic{
     right: 35px;
+}
 
+.gp {
+    text-decoration: none;
+}
+
+
+
+.start{
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgba(185, 229, 230, 1);
+}
+
+.start:hover {
+    cursor: pointer;
+    background-color: aquamarine;
 }
 
 
@@ -155,7 +172,7 @@ a:hover {
     }
     section {
     height: 100px;
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -193,30 +210,32 @@ a:hover {
     }
 
     .am {
+        top: -5px;
         right: 15px;
     }
     
     .amc {
-        top: -30px;
         right: 0px;
+        top: -45px
     }
     
     .ss {
+        top: -5px;
         right: 15px;
     }
     
     .ssc{
         right: 0px;
-        top: -30px
+        top: -45px
     }
     
     .gp {
-        right: 25px;
+        top: -5px;
+        right: 15px;
     }
     .gic{
-        right: -20px;
-        top: -30px;
-    
+        right: 0px;
+        top: -45px
     }
     
     .line-graph {
@@ -233,7 +252,7 @@ a:hover {
 @media (max-width: 480px) {
     section {
     height: 100px;
-    width: 50%
+    width: 70%
 
         
     }
@@ -257,8 +276,8 @@ a:hover {
 }
 
 .amc {
-    top: -30px;
-    right: 0px;
+    right: -20px;
+    top: -50px;
 }
 
 .ss {
@@ -266,8 +285,8 @@ a:hover {
 }
 
 .ssc{
-    right: 0px;
-    top: -30px
+    right: -20px;
+    top: -50px;
 }
 
 .gp {
@@ -275,7 +294,7 @@ a:hover {
 }
 .gic{
     right: -20px;
-    top: -30px;
+    top: -50px;
 
 }
 
