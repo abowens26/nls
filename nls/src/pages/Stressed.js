@@ -2,20 +2,37 @@ import React from "react";
 import Header from "../Components/Header";
 import Nav from "../Components/Nav";
 import "./Stressed.css"
+import music from "../Components/Assets/789304__ilariio__midnight-serenade.mp3"
 
 
 
 function Stressed () {
     
+    let audio = new Audio(music)
+    /**Show list */
     function dropAnger() {
         document.getElementById("anger").classList.toggle("show");
     }
 
+    /**Show list */
     function dropStress() {
         document.getElementById("stress").classList.toggle("show");
     }
+
+    /*Plays music */
+    function Playmusic() {
+         audio(music).play()
+        document.getElementById("play").style.display="none"
+        
+    }
+
+    function Pausemusic() {
+         audio(music).pause()
+    }
+
+
     
-    
+    /*Additional code for pla */
     return (
         <div>
             <Header />
@@ -27,6 +44,8 @@ function Stressed () {
                 <h3 class="cope">Coping Strategies for Anger</h3>
                 <span class="bottom-corner">
                 <button class="coping" onClick={dropAnger}>Click me if Angry  &#128545; </button>
+                <button class="coping" id="play" onClick={Playmusic}>Play Music</button>
+                <button class= "coping" onClick={Pausemusic}>Pause Music</button>
                 </span>
                 
             </section>

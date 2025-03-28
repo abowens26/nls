@@ -43,8 +43,7 @@
 .next {
     padding: 15px 30px 15px 30px;
     background-color:  rgb(189, 186, 186);
-    display: none;
-    
+    visibility: hidden;
 }
 
 .next:hover {
@@ -103,14 +102,6 @@
     margin-top: 10px;
 }
 
-
-#next-btn {
- display: none;
-}
-
-#next-btn:disabled {
-    display: none;
-}
 
 #startquiz:disabled {
     display: none;

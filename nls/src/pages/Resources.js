@@ -5,6 +5,7 @@ import "./Resources.css"
 
 
 function Resources () {
+    /*Page for links to outside resources for users  */
     return (
         <div>
              <Header />

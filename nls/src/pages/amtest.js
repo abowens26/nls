@@ -4,8 +4,10 @@ import './amtest.css'
 import questionbank2 from "../Components/Assets/questionbank2";
 import supabase from "../helper/supabaseClient";
 
-
+/*Code for Anger Management Module */ 
 function Amtest() {
+
+    /*Initialize test variables */
     const testname = "Anger Management Test"
     const [score, setScore] = useState(0)
     const finalScore = (score / questionbank2.length) * 100
@@ -16,7 +18,7 @@ function Amtest() {
     const [email, setEmail] = useState("")
     const amModheaders = ["Anger Management Presentation", testname];
 
-
+    /*Fetch user from Supabase database for test */
     useEffect(() => {
         const fetchUser = async () => {
             const {data} = await supabase.auth.getUser();
@@ -27,7 +29,7 @@ function Amtest() {
         fetchUser();
     })
 
-
+    /*Show and hide elements when module starts */
     const startModule = () => {
         document.getElementById("am-title").style.display = "none";
         document.getElementById("a-title").innerHTML = amModheaders[0];
@@ -39,22 +41,23 @@ function Amtest() {
     }
 
 
-    
+    /*Show and hide elements when quiz starts  */
     const startQuiz = () => {
         document.getElementById("a-title").innerHTML = amModheaders[1];
         document.getElementById("amquestion").style.display = "block";
         document.getElementById("ppt").style.display = "none";
         document.getElementById("startquiz").style.display = "none";
-        document.getElementById("amnext-btn").style.display = "block";
+        document.getElementById("amnext-btn").style.visibility="visible"
         document.getElementById("content").style.display = "none";
     }
 
 
 
 
-    
+    /*Switch to next question when user clicks the "next" button*/
     const nextQuestion = () => {
 
+         /*Increases the score if user picks correct answer*/
         if (questionbank2[currentQuestion].Answer === optionChosen) {
             setScore(score + 1);
         }
@@ -71,11 +74,13 @@ function Amtest() {
             newtestScore = score + 1
             setScore(newtestScore);
         }
-
+          /*Calculates score percentage based on how well user does */
         const finalScore = (newtestScore / questionbank2.length) * 100
+            /*Rounds the score to the nearest tenth */
         const roundedScore = Math.round(finalScore * 10) / 10
-
-        sessionStorage.setItem("Amfinalscore", (roundedScore));
+            /*Insert score into local storage so user can access in dashboard (this is subject to change due to security purposes)  */
+        localStorage.setItem("Amfinalscore", (roundedScore));
+             /*Show and hide elements when quiz ends */
         document.getElementById("submit").hidden = true;
         document.getElementById("option1").hidden = true;
         document.getElementById("option2").hidden = true;
@@ -87,7 +92,7 @@ function Amtest() {
         document.getElementById("amnext-btn").style.display = "none";
         document.getElementById("a-title").style.display = "none";
 
-
+                /*Show different affirmation messages based on test score */
         if (finalScore <= 100 &&  finalScore >= 80) {
             document.getElementById("message").innerHTML = positiveAffirmation[0];
 
@@ -103,7 +108,7 @@ function Amtest() {
 
 
 
-
+        /*Post and save score into mongoDB atlas database */
         try {
             await fetch(process.env.BASE_URL, {
                 method: "POST",

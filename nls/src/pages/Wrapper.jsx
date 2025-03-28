@@ -7,8 +7,9 @@ import supabase from "../helper/supabaseClient";
 
 
 
-
+/*Code From: https://www.youtube.com/watch?v=Q7-DI39epR8&t=2s */
 /*Source: https://github.com/arpanneupane19/react-supabase-auth */
+/*Code for protected routes within application */
 function Wrapper({children}) {
     const [authenticated, setAuthenticated] = useState(false);
     const [loading, setLoading] = useState(true);

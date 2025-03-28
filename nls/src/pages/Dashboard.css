@@ -68,7 +68,7 @@ a:hover {
 }
 
 .show-recent:hover {
-   text-decoration: underline;
+   text-decoration: none;
 }
 .recent {
     display: none;
@@ -104,7 +104,7 @@ a:hover {
 
 
 .test-link:hover {
-    text-decoration: underline;
+    text-decoration: none;
     font-weight: normal;
 }
 
@@ -161,7 +161,7 @@ a:hover {
 
 .start:hover {
     cursor: pointer;
-    background-color: aquamarine;
+    background-color: white
 }
 
 

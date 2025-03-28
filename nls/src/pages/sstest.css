@@ -41,7 +41,7 @@
 
 .quiz-ss {
  
-    display: none;
+    visibility: hidden;
 }
 
 .quiz-ss:hover {

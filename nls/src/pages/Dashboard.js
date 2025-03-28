@@ -10,30 +10,23 @@ import image3 from "../Components/Assets/iStock-901420250.jpg"
 
 
 function Dashboard() {
-    const amRecentscore = sessionStorage.getItem('Amfinalscore')
-    const recentScore = sessionStorage.getItem("finalScore")
-    const giRecentScore = sessionStorage.getItem("GifinalScore")
+     /*Gets scores from local storage so user can access in dashboard (this is subject to change due to security purposes)  */
+    const amRecentscore = localStorage.getItem('Amfinalscore')
+    const recentScore = localStorage.getItem("finalScore")
+    const giRecentScore = localStorage.getItem("GifinalScore")
+
+    /*Show recent score for social skills test */
     const ShowRecentScore =  async () => {
         document.getElementById("recent-score").classList.toggle("show");
 
-        try {
-            const send = await fetch("http://localhost:4001/api/score", {
-                method: "GET",
-                headers: {
-                    'Content-Type': 'application/json'
-                }, 
-
-            });
-            console.log("score saved!")
-        } catch (error) {
-            console.log("unable to save score", error)
-        }
+        
     }
-
+        /*Show recent score for anger management test */
     function AmRecentScore() {
         document.getElementById("am-recent").classList.toggle("show");
     }
 
+    /*Show recent score for G.R.O.U.P Module Test*/
     function GiRecentScore() {
         document.getElementById("gi-recent").classList.toggle("show");
     }

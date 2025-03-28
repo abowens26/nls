@@ -39,7 +39,8 @@
 
 .next {
     padding: 15px 30px 15px 30px;
-    background-color:  rgb(189, 186, 186)
+    background-color:  rgb(189, 186, 186);
+    visibility: hidden;
 }
 
 .next:hover {
@@ -77,10 +78,6 @@
 }
 
 .submit:disabled {
-    display: none;
-}
-
-#amnext-btn {
     display: none;
 }
 

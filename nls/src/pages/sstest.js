@@ -5,8 +5,9 @@ import questionbank from "../Components/Assets/questionbank";
 import supabase from "../helper/supabaseClient";
 
 
-
+/*Code for Social Skills Module */ 
 function Sstest() {
+    /**Initilaize test elements */
     const [email, setEmail] = useState("");
     const testname = "Social Skills Test"
     const [score, setScore] = useState(0)
@@ -15,6 +16,7 @@ function Sstest() {
     const ssModheaders = ["Social Skills Presentation", testname];
 
 
+/*Fetch user from Supabase database for test */
     useEffect(() => {
         const fetchUser = async () => {
             const { data } = await supabase.auth.getUser();
@@ -23,13 +25,14 @@ function Sstest() {
             }
         };
         fetchUser();
-    }, []);
+    });
 
+    /*Initialize question and option variables */
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [optionChosen, setOptionChosen] = useState("")
     const positiveAffirmation = ["Great Job!", "Keep Going!", "Better Luck Next Time!", "Keep working you got this!", ":("]
 
-
+    /*Show and hide elements when module starts */
     const startModule = () => {
         document.getElementById("ss-title").style.display = "none";
         document.getElementById("s-title").innerHTML = ssModheaders[0];
@@ -41,21 +44,22 @@ function Sstest() {
     }
 
 
-
+    /*Show and hide elements when module starts */
     const startQuiz = () => {
         document.getElementById("s-title").innerHTML = ssModheaders[1];
         document.getElementById("ssquestion").style.display = "block";
         document.getElementById("ppt").style.display = "none";
         document.getElementById("startquiz").style.display = "none";
-        document.getElementById("next-btn").style.display = "block";
+        document.getElementById("next-btn").style.visibility = "visible";
         document.getElementById("content").style.display = "none";
 
 
     }
 
-
+    /*Switch to next question when user clicks the "next" button*/
     const nextQuestion = () => {
 
+         /*Increases the score if user picks correct answer*/
         if (questionbank[currentQuestion].Answer === optionChosen) {
             setScore(score + 1);
         }
@@ -71,11 +75,13 @@ function Sstest() {
             setScore(newtestScore);
         }
 
-
+          /*Calculates score percentage based on how well user does */
         const finalScore = (newtestScore / questionbank.length) * 100
+         /*Rounds the score to the nearest tenth */
         const roundedScore = Math.round(finalScore * 10) / 10
-
-        sessionStorage.setItem("finalScore", roundedScore)
+         /*Insert score into local storage so user can access in dashboard (this is subject to change due to security purposes)  */
+        localStorage.setItem("finalScore", roundedScore)
+          /*Show and hide elements when quiz ends */
         document.getElementById("submit").hidden = true;
         document.getElementById("option1").hidden = true;
         document.getElementById("option2").hidden = true;
@@ -87,7 +93,7 @@ function Sstest() {
         document.getElementById("next-btn").style.display = "none";
         document.getElementById("s-title").style.display = "none";
 
-
+        /*Show different affirmation messages based on test score */
         if (finalScore <= 100 &&  finalScore >= 80) {
             document.getElementById("message").innerHTML = positiveAffirmation[0];
 
@@ -101,7 +107,7 @@ function Sstest() {
             document.getElementById("message").innerHTML = positiveAffirmation[4]
         }
 
-
+         /*Post and save score into mongoDB atlas database */
         try {
             await fetch("http://localhost:4001/api/score", {
                 method: "POST",

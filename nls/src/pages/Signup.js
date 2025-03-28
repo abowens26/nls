@@ -10,8 +10,9 @@ function SignUp() {
     const [message, setMessage] = useState("");
     const navigate = useNavigate();
 
-     /*Code from: */
+     /*Code from: https://www.youtube.com/watch?v=Q7-DI39epR8&t=2s */
      /*Source: https://github.com/arpanneupane19/react-supabase-auth */
+     /*Code for user creating an account*/
     const handleSubmit = async(event) => {
         event.preventDefault();
         setMessage("")
