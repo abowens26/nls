@@ -9,11 +9,12 @@ app.use(cors());
 const TestScore = require('./models.js')
 
 app.use(express.json());
+const port = process.env.PORT || 4001;
 
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true })
+mongoose.connect(port, { useNewUrlParser: true })
   .then(() => {
-    app.listen(process.env.PORT, () => {
-      console.log('connected to DB & listening on port', process.env.PORT)
+    app.listen(port, () => {
+      console.log('connected to DB & listening on port', port)
     })
   })
   .catch(() => {
