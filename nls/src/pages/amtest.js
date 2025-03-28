@@ -19,6 +19,7 @@ function Amtest() {
     const amModheaders = ["Anger Management Presentation", testname];
 
     /*Fetch user from Supabase database for test */
+    
     useEffect(() => {
         const fetchUser = async () => {
             const {data} = await supabase.auth.getUser();
@@ -110,7 +111,7 @@ function Amtest() {
 
         /*Post and save score into mongoDB atlas database */
         try {
-            await fetch(process.env.BASE_URL, {
+            await fetch("http://localhost:4001/api/score", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
