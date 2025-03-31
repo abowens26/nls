@@ -18,7 +18,7 @@ function Amtest() {
     const [email, setEmail] = useState("")
     const amModheaders = ["Anger Management Presentation", testname];
 
-    /*Fetch user from Supabase database for test */
+    /*Fetch user from Supabase database for the quiz */
     
     useEffect(() => {
         const fetchUser = async () => {
@@ -28,7 +28,7 @@ function Amtest() {
             }
         };
         fetchUser();
-    })
+    },[])
 
     /*Show and hide elements when module starts */
     const startModule = () => {
@@ -110,6 +110,7 @@ function Amtest() {
 
 
         /*Post and save score into mongoDB atlas database */
+        //The link within fetch WILL be an environment variable when connected to mongoDB
         try {
             await fetch("http://localhost:4001/api/score", {
                 method: "POST",

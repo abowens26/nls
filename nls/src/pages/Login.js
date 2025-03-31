@@ -20,6 +20,7 @@ function Login() {
     
      /*Code from: https://www.youtube.com/watch?v=Q7-DI39epR8&t=2s */
      /*Source: https://github.com/arpanneupane19/react-supabase-auth */
+     //Allows user to sign in
     const handleSubmit = async(event) => {
         event.preventDefault();
         setLoginStatus("")

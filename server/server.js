@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true })
 
 
 app.get('/', async (req, res) => {
-  res.send("Hello Aliw");
+  res.send("Hello Ali");
 
 });
 
@@ -50,40 +50,6 @@ app.post('/api/score', async (req, res) => {
 
   
 });
-
-app.get('/api/score/:id', async (req, res) => {
-  try {
-    const {id} = req.params;
-    const Score = await TestScore.findById(id);
-    res.status(200).json(Score);
-  } catch (error) {
-    res.status(500).json({message: error.message});
-  }
-})
-
-//Update a the score 
-app.put('/api/score:id', async(req, res) => {
-  try {
-    const {id} = req.params;
-   const tscore = await TestScore.findByIdAndUpdate(id, req.body); 
-    if (!tscore) {
-      console.log("score does not exist")
-    }
-
-
-    const updatedScore = await TestScore.findById(id);
-    res.status(200).json(updatedScore);
-
-  } catch (error) {
-    res.status(500).json({message: error.message})
-  }
-
-});
-
-
-
-
-
 
 
 app.get('/', (req, res) => {

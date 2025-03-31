@@ -12,7 +12,7 @@ import GImodTest from './pages/GImodtest.js';
 
 function App() {
 
-  /*Available routes within application */
+  //Available routes within application
   return (
     <div className="App">
       <BrowserRouter>

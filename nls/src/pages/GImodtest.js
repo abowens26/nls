@@ -43,7 +43,7 @@ const startModule = () => {
     }
 
    
-/*Show and hide elements when module starts */
+/*Show and hide elements when quiz starts */
     const startQuiz = () => {
         document.getElementById("q-container").style.display="block"
         document.getElementById("content").style.display="none"
@@ -69,7 +69,7 @@ const startModule = () => {
     }
 
 
- 
+   //Saves test score into database and calcuates test score
     const submitQuiz = async () => {
 
         let newtestScore=score;
