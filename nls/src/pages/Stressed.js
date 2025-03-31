@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../Components/Header";
 import Nav from "../Components/Nav";
 import "./Stressed.css"
-import music from "../Components/Assets/789304__ilariio__midnight-serenade.mp3"
 
 
 

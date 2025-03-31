@@ -1,6 +1,7 @@
 
 const mongoose = require('mongoose')
 
+//Schema for test scores in mongoDB databse
 const TestScoreSchema = mongoose.Schema(
     {
         testname: {
