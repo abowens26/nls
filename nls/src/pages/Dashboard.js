@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 import Header from "../Components/Header"
 import "./Dashboard.css"
 import Nav from "../Components/Nav"
@@ -14,7 +14,7 @@ function Dashboard() {
     const amRecentscore = localStorage.getItem('Amfinalscore')
     const recentScore = localStorage.getItem("finalScore")
     const giRecentScore = localStorage.getItem("GifinalScore")
-
+    const [goals, setGoals] = useState("");
     /*Show recent score for social skills test */
     const ShowRecentScore =  async () => {
         document.getElementById("recent-score").classList.toggle("show");
@@ -30,6 +30,25 @@ function Dashboard() {
     function GiRecentScore() {
         document.getElementById("gi-recent").classList.toggle("show");
     }
+
+    function noteDropdown() {
+        document.getElementById("dropdown-content").classList.toggle("show");
+    }
+
+    function ssnoteDropdown() {
+        document.getElementById("ssdropdown-content").classList.toggle("show");
+    }
+
+    
+    function amnoteDropdown() {
+        document.getElementById("amdropdown-content").classList.toggle("show");
+    }
+
+    const handleSubmit = () => {
+        localStorage.setItem("Goals", goals)
+
+    }
+
 
 
     
@@ -62,6 +81,21 @@ function Dashboard() {
            </div>
 
             </section>  
+            
+            <div class="note-container">
+            <div></div>
+            <button class="back-dashboard goal-btn" onClick={noteDropdown}> Set Goals &#8964;</button>
+            <div id="dropdown-content" class="drop">
+            <div class="textarea">
+              <textarea id="gi-goals" class="text" onChange={(e) => {setGoals(e.target.value);}}></textarea>
+              <button class="submit-goals" onClick={handleSubmit}>Submit</button>   
+            </div>
+            </div>
+         
+
+
+            </div>
+          
 
 
             <section>
@@ -79,6 +113,21 @@ function Dashboard() {
            </div>
                 
             </section>
+
+            <div class="note-container ss-goals">
+            <button class="back-dashboard goal-btn" onClick={ssnoteDropdown}> Set Goals &#8964;</button>
+            <div id="ssdropdown-content" class="drop">
+            <div class="textarea">
+              <textarea id="gi-goals" class="text" onChange={(e) => {setGoals(e.target.value);}}></textarea>
+              <button class="submit-goals" onClick={handleSubmit}>Submit</button>   
+            </div>
+            </div>
+           
+
+
+            </div>
+
+            
             
             
 
@@ -97,7 +146,20 @@ function Dashboard() {
             <p id="am-recent" class="recent"> {amRecentscore}%</p>  
            </div>
 
-            </section>   
+            </section> 
+
+            <div class="note-container">
+            <button class="back-dashboard goal-btn" onClick={amnoteDropdown}> Set Goals &#8964;</button>
+            <div id="amdropdown-content" class="drop">
+            <div class="textarea">
+              <textarea id="gi-goals" class="text" onChange={(e) => {setGoals(e.target.value);}}></textarea>
+              <button class="submit-goals" onClick={handleSubmit}>Submit</button>   
+            </div>
+            </div>
+           
+
+
+            </div>  
 
             
 

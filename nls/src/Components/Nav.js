@@ -1,5 +1,6 @@
 import React from "react";
 import "./Nav.css"
+import { NavLink } from "react-router-dom";
 
 
 function Nav(){
@@ -10,9 +11,9 @@ function Nav(){
     return (
         <div>
             <nav>
-                <a class="nav" href="/Dashboard">Home </a><br></br>
-                <a class="nav" href="/Resources">Additional Resources </a><br></br>
-                <a class="nav" href="/Stressed">Feeling Stressed? </a>
+                <a class="nav"><NavLink  exact to="/Dashboard">Home</NavLink> </a>
+                <a class="nav"><NavLink  exact to="/Resources">Additional Resources</NavLink></a>
+                <a class="nav"><NavLink  exact to="/Stressed">Feeling Stressed?</NavLink></a>
 
             </nav>
         </div>

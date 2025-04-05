@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react";
 import './Header.css'
-import { createClient } from "@supabase/supabase-js";
 import { useNavigate } from "react-router-dom";
 import supabase from "../helper/supabaseClient";
 
@@ -32,6 +31,9 @@ import supabase from "../helper/supabaseClient";
         const {error} = await supabase.auth.signOut();
         if(error) throw error;
         navigate("/")
+        //clears localstorage when user signs out
+        localStorage.clear();
+       
     }
 
     
