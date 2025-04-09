@@ -7,13 +7,13 @@ app.use(cors());
 
 //Import testscore schema from models.js
 const TestScore = require('./models.js')
-const PORT = process.env.PORT || 4001;
+const port = process.env.PORT || 4001;
 app.use(express.json());
 //Connect to mongoDB database
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true })
   .then(() => {
-    app.listen(PORT, () => {
-      console.log('connected to DB & listening on port', PORT)
+    app.listen(port, () => {
+      console.log('connected to DB & listening on port', port)
     })
   })
   .catch(() => {
