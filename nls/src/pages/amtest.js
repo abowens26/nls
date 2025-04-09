@@ -121,7 +121,7 @@ function Amtest() {
                 body: JSON.stringify({
                     testname: testname,
                     user: email,
-                    score: finalScore
+                    score: roundedScore
 
                 })
             });

@@ -29,13 +29,28 @@ app.get('/', async (req, res) => {
 
 //gets test scores from database
 app.get('/api/score', async (req, res) => {
+  var user = req.query.user
+  var testname = req.query.testname;
+
   try {
-    const Score = await TestScore.find({});
+    const Score = await TestScore.findOne({user, testname}).sort({createdAt: -1});
     res.status(200).json(Score);
   } catch (error) {
     res.status(500).json({message: error.message});
   }
 })
+
+app.get('/api/score/:user', async (req, res) => {
+  const user = req.params.user
+  
+  try {
+    const Score = await TestScore.find({user}).sort({createdAt: -1});
+    res.status(200).json(Score);
+  } catch (error) {
+    res.status(500).json({message: error.message});
+  }
+})
+
 
 //post test scores to database 
 app.post('/api/score', async (req, res) => {

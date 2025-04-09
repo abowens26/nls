@@ -118,7 +118,7 @@ function Sstest() {
                 body: JSON.stringify({
                     testname: testname,
                     user: email,
-                    score: finalScore
+                    score: roundedScore
 
                 })
             });

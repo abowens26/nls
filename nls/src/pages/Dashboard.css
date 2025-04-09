@@ -74,6 +74,7 @@ a:hover {
     display: none;
     margin-right: 10px;
     font-weight: bold;
+    font-size: medium;
 
     
 }
@@ -145,11 +146,12 @@ a:hover {
 }
 
 .gic{
-    right: 35px;
+    right: -10px;
 }
 
 .gp {
     text-decoration: none;
+    right: -100px;
 }
 
 
@@ -222,6 +224,10 @@ a:hover {
 .submit-goals:hover{
     background-color: white;
     cursor: pointer;
+}
+
+.mod-title {
+    font-size: xx-large;
 }
 
 
