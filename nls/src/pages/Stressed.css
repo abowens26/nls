@@ -58,6 +58,10 @@
     border-radius: 10px;
     background-color: rgba(185, 229, 230, 1);
 }
+
+button {
+    color: black;
+}
     
 }
 
@@ -78,6 +82,10 @@
     padding: 20px;
     width: 75%;
 
+}
+
+button {
+    color: black;
 }
 
 }

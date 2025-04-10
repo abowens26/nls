@@ -262,6 +262,7 @@ a:hover {
         font-size: small;
         right: 0px;
         top: 0px;
+        
     }
 
     .test-link:hover {
@@ -310,7 +311,9 @@ a:hover {
         height: 40vh;
     }
 
-    
+    a {
+        color: black;
+    }
 
 
     
@@ -371,6 +374,8 @@ a:hover {
     padding: 10px;
 }
 
-
+a {
+    color: black;
+}
     
 }
