@@ -114,7 +114,7 @@ const startModule = () => {
 
         /*Post and save score into mongoDB atlas database */
         try {
-            await fetch("http://localhost:4001/api/score", {
+            await fetch("https://nls-api.onrender.com/api/score", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'

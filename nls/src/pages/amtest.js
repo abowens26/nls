@@ -112,7 +112,7 @@ function Amtest() {
         /*Post and save score into mongoDB atlas database */
         //The link within fetch WILL be an environment variable when connected to mongoDB
         try {
-            await fetch("http://localhost:4001/api/score", {
+            await fetch("https://nls-api.onrender.com/api/score", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
