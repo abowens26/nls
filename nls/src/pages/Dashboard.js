@@ -39,7 +39,7 @@ function Dashboard() {
         const fetchScore = async () => {
             try {
 
-                const response = await fetch(`http://localhost:4001/api/score?user=${email}&testname=Social Skills Test`);
+                const response = await fetch(`https://nls-api.onrender.com/api/score?user=${email}&testname=Social Skills Test`);
                 const data = await response.json();
                 console.log(data);
                 setScore(data);
@@ -59,7 +59,7 @@ function Dashboard() {
         const fetchGIScore = async () => {
             try {
 
-                const response = await fetch(`http://localhost:4001/api/score?user=${email}&testname=G.R.O.U.P Introduction`);
+                const response = await fetch(`https://nls-api.onrender.com/api/score?user=${email}&testname=G.R.O.U.P Introduction`);
                 const data = await response.json();
                 console.log(data);
                 setScoreGI(data);
@@ -77,7 +77,7 @@ function Dashboard() {
         const fetchAmScore = async () => {
             try {
 
-                const response = await fetch(`http://localhost:4001/api/score?user=${email}&testname=Anger Management Test`);
+                const response = await fetch(`https://nls-api.onrender.com/api/score?user=${email}&testname=Anger Management Test`);
                 const data = await response.json();
                 console.log(data);
                 setScoreAm(data);
