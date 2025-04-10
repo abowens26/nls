@@ -154,7 +154,7 @@ function Dashboard() {
                         <div class="score-container gic">
 
                             <p class="show-recent" onClick={GiRecentScore}><button class="start">Show Recent Score</button></p>
-                            <p id="gi-recent" class="recent"> {scoreGI ? scoreGI.score : "score not available"}%</p>
+                            <p id="gi-recent" class="recent"> {scoreGI ? scoreGI.score : "Loading Score"}%</p>
                         </div>
 
                     </section>
@@ -186,7 +186,7 @@ function Dashboard() {
 
                         <div class="score-container ssc">
                             <p class="show-recent" onClick={ShowRecentScore}> <button class="start">Show Recent Score</button></p>
-                            <p id="recent-score" class="recent">{score ? score.score : "score not available"}% </p>
+                            <p id="recent-score" class="recent">{score ? score.score : "Loading Score"}% </p>
                         </div>
 
                     </section>
@@ -220,7 +220,7 @@ function Dashboard() {
 
                         <div class="score-container amc">
                             <p class="show-recent" onClick={AmRecentScore}> <button class="start">Show Recent Score</button></p>
-                            <p id="am-recent" class="recent"> {scoreAm ? scoreAm.score : "score not available"}%</p>
+                            <p id="am-recent" class="recent"> {scoreAm ? scoreAm.score : "Loading Score"}%</p>
                         </div>
 
                     </section>
