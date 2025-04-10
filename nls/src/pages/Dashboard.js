@@ -250,30 +250,7 @@ function Dashboard() {
 
                 </div>
 
-                <div class="line-graph">
-                    <h2></h2>
-          <Line 
-               
-                data={{
-                  
-                    labels: ["G.R.O.U.P Introduction Test", "Social Skills Test", "Anger Management Test" ],
-                    datasets: [
-                        {
-                            label: "Test Score",
-                            data: [`${score}`, `${scoreGI}`, `${scoreAm}`],
-                        },
-                    ]
-                }}
-                options={{
-                    maintainAspectRatio: false,
-                  
-
-                }}
-
-/>
-
-
-                </div>
+             
 
             </div>
 
