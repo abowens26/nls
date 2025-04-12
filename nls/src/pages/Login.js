@@ -42,6 +42,11 @@ function Login() {
     }
 
 
+ 
+
+
+
+
 
 
 
@@ -62,8 +67,9 @@ function Login() {
                 <input type="password" value={password} class="login-field" placeholder="Password" onChange={(e) => {
                     setPassword(e.target.value);
                 }} required></input>
-                <button type="submit" class="submit-btn"  onClick={handleSubmit}>Login</button>
+                <button type="submit" class="submit-btn" onClick={handleSubmit}>Login</button>
                 <p class="signup">Don't have an account? <a href="/Signup">Sign Up</a></p>
+                <p class="signup"><a href="/Recover">Forgot password?</a></p>
             </div>
 
         

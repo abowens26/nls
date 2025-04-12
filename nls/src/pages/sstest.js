@@ -13,8 +13,8 @@ function Sstest() {
     const [score, setScore] = useState(0)
     const finalScore = (score / questionbank.length) * 100
     const roundedScore = Math.round(finalScore * 10) / 10
-    const ssModheaders = ["Social Skills Presentation", testname];
-
+    const ssModheaders = ["Social Skills Video", testname];
+    const [positiveAffirmation, setPostiveAffirmation] = useState("")
 
 /*Fetch user from Supabase database for test */
     useEffect(() => {
@@ -30,16 +30,15 @@ function Sstest() {
     /*Initialize question and option variables */
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [optionChosen, setOptionChosen] = useState("")
-    const positiveAffirmation = ["Great Job!", "Keep Going!", "Better Luck Next Time!", "Keep working you got this!", ":("]
 
     /*Show and hide elements when module starts */
     const startModule = () => {
         document.getElementById("ss-title").style.display = "none";
         document.getElementById("s-title").innerHTML = ssModheaders[0];
         document.getElementById("start").hidden = true;
-        document.getElementById("ppt").style.display = "block";
+        document.getElementById("vid").style.display = "block";
         document.getElementById("startquiz").style.display = "block"
-        document.getElementById("content").innerHTML = "Go through the slides and start quiz when you are ready!!";
+        document.getElementById("content").innerHTML = "Watch the video and start the quiz when you are ready!";
 
     }
 
@@ -48,7 +47,7 @@ function Sstest() {
     const startQuiz = () => {
         document.getElementById("s-title").innerHTML = ssModheaders[1];
         document.getElementById("ssquestion").style.display = "block";
-        document.getElementById("ppt").style.display = "none";
+        document.getElementById("vid").style.display = "none";
         document.getElementById("startquiz").style.display = "none";
         document.getElementById("next-btn").style.visibility = "visible";
         document.getElementById("content").style.display = "none";
@@ -95,17 +94,16 @@ function Sstest() {
 
         /*Show different affirmation messages based on test score */
         if (finalScore <= 100 &&  finalScore >= 80) {
-            document.getElementById("message").innerHTML = positiveAffirmation[0];
-
-        } else if (finalScore <= 79 && finalScore >= 60) {
-            document.getElementById("message").innerHTML = positiveAffirmation[1]
-        } else if (finalScore <= 59 && finalScore >= 40) {
-            document.getElementById("message").innerHTML = positiveAffirmation[2]
-        } else if (finalScore <= 39 && finalScore >= 20) {
-            document.getElementById("message").innerHTML = positiveAffirmation[3]
-        } else if (finalScore < 20) {
-            document.getElementById("message").innerHTML = positiveAffirmation[4]
-        }
+            setPostiveAffirmation("Great Job! :)")
+         } else if (finalScore <= 79 && finalScore >= 60) {
+             setPostiveAffirmation("You're Almost there!")
+         } else if (finalScore <= 59 && finalScore >= 40) {
+            setPostiveAffirmation("Keep Going!")
+         } else if (finalScore <= 39 && finalScore >= 20) {
+             setPostiveAffirmation("Better Luck Next Time!")
+         } else if (finalScore < 20) {
+            setPostiveAffirmation(">:(")
+         }
 
          /*Post and save score into mongoDB atlas database */
         try {
@@ -155,13 +153,16 @@ function Sstest() {
             <div class="start-btn-container" id="mod-btns">
                 <button class="back-dashboard quiz" id="startquiz" onClick={startQuiz}>Start Quiz</button>
                 <iframe
-                    id="ppt"
-                    src="https://1drv.ms/p/c/b9f038b663af0215/IQR_AfyLXU5sRqsnVRiPvLxtAcPCsCUbsEhzoKszXqP1Cf8?em=2&amp;wdAr=1.7777777777777777"
-                    class="ppt"
-                    width="800px"
-                    height="450px"
-                    frameborder="10">This is an embedded
-                </iframe>
+                 width="800px" 
+                 id="vid"
+                 class="vid"
+                 height="450"
+                  src="https://www.youtube.com/embed/IcUR8NxLdG4" 
+                title="Social Skills For Kids - Ways To Improve Social Skills For Elementary-Middle School" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                 </iframe>
                 <button class="back-dashboard" id="start" onClick={startModule}> Start</button>
 
             </div>
@@ -189,7 +190,7 @@ function Sstest() {
                 <div class="final-score-container">
                     <h2 class="final-score">{roundedScore}%</h2><br></br>
                 </div>
-                <h2 class="final-score-container" id="message"></h2>
+                <h2 class="final-score-container" id="message">{positiveAffirmation}</h2>
                 <div class="final-score-container">
                     <button class="back-dashboard back" onClick={() => window.location.href = "/Dashboard"}>Back to Dashboard</button>
                 </div>

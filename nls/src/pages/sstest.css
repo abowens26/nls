@@ -126,6 +126,11 @@
     background-color: rgb(189, 186, 186)
 }
 
+#vid {
+    display: none;
+    border: solid black 10px;
+    border-radius: 20px;
+}
 
 
 @media (max-width: 768px) {
@@ -149,7 +154,7 @@
 
     }
 
-    .ppt {
+    .vid {
         height: 200px;
         width: 350px;
     }
@@ -192,7 +197,7 @@
 
     }
 
-    .ppt {
+    .vid {
         height: 200px;
         width: 350px;
     }

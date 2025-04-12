@@ -9,7 +9,7 @@ import Stressed from './pages/Stressed';
 import Wrapper from './pages/Wrapper.jsx';
 import Amtest from './pages/amtest.js';
 import GImodTest from './pages/GImodtest.js';
-
+import Recover from './pages/Recover.js';
 function App() {
 
   //Available routes within application
@@ -19,6 +19,7 @@ function App() {
          <Routes>
          <Route index element={<Login />} />
          <Route path="/Signup" element={<SignUp />} />
+         <Route path="/Recover" element={<Recover />} />
          <Route path="/Dashboard" element={<Wrapper><Dashboard /></Wrapper>} />
          <Route path="/Test" element={<Wrapper><Test /></Wrapper>} />
          <Route path="/Resources" element={<Wrapper><Resources /></Wrapper>} />

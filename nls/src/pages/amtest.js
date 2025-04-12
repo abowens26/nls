@@ -14,10 +14,9 @@ function Amtest() {
     const roundedScore = Math.round(finalScore * 10) / 10
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [optionChosen, setOptionChosen] = useState("")
-    const positiveAffirmation = ["Great Job!", "Keep Going!", "Better Luck Next Time!", "Keep working you got this!", ":("]
     const [email, setEmail] = useState("")
     const amModheaders = ["Anger Management Presentation", testname];
-
+    const [positiveAffirmation, setPostiveAffirmation] = useState("")
     /*Fetch user from Supabase database for the quiz */
     
     useEffect(() => {
@@ -94,19 +93,18 @@ function Amtest() {
         document.getElementById("a-title").style.display = "none";
 
                 /*Show different affirmation messages based on test score */
-        if (finalScore <= 100 &&  finalScore >= 80) {
-            document.getElementById("message").innerHTML = positiveAffirmation[0];
-
-        } else if (finalScore <= 79 && finalScore >= 60) {
-            document.getElementById("message").innerHTML = positiveAffirmation[1]
-        } else if (finalScore <= 59 && finalScore >= 40) {
-            document.getElementById("message").innerHTML = positiveAffirmation[2]
-        } else if (finalScore <= 39 && finalScore >= 20) {
-            document.getElementById("message").innerHTML = positiveAffirmation[3]
-        } else if (finalScore < 20) {
-            document.getElementById("message").innerHTML = positiveAffirmation[4]
-        }
-
+                if (finalScore <= 100 &&  finalScore >= 80) {
+                    setPostiveAffirmation("Great Job! :)")
+                 } else if (finalScore <= 79 && finalScore >= 60) {
+                     setPostiveAffirmation("You're Almost there!")
+                 } else if (finalScore <= 59 && finalScore >= 40) {
+                    setPostiveAffirmation("Keep Going!")
+                 } else if (finalScore <= 39 && finalScore >= 20) {
+                     setPostiveAffirmation("Better Luck Next Time!")
+                 } else if (finalScore < 20) {
+                    setPostiveAffirmation(">:(")
+                 }
+        
 
 
         /*Post and save score into mongoDB atlas database */
@@ -201,7 +199,7 @@ function Amtest() {
                 <div class="final-score-container">
                     <h2 class="final-score">{roundedScore}%</h2><br></br>
                 </div>
-                <h2 class="final-score-container" id="message"></h2>
+                <h2 class="final-score-container" id="message">{positiveAffirmation}</h2>
                 <div class="final-score-container">
                     <button class="back-dashboard back" onClick={() => window.location.href = "/Dashboard"}>Back to Dashboard</button>
                 </div>

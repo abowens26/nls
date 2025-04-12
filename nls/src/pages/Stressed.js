@@ -38,11 +38,11 @@ function Stressed () {
             <div class="list-container">
             <uo class="list">
                 <p>Conduct the following practices to cope with your Anger!</p>
-                <li>Count to 10 or 100 to help delay any inpiulsive reactions &#127744;</li>
+                <li>Count to 10 or 100 to help delay any impulsive reactions &#127744;</li>
                 <li>Deep Breathing (10 second Intervals) &#128558;</li>
                 <li>Physical Activity/Exercise &#127947;</li>
-                <li>Relax any tense muscles &#129496;</li>
-                <li>Take time off &#127774;</li>
+                <li>Relax Any Tense Muscles &#129496;</li>
+                <li>Take Time Off &#127774;</li>
             </uo>
             </div>
             
