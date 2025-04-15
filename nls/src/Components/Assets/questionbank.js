@@ -1,38 +1,38 @@
 
 export default [
     {
-        question: "What is the best way to start a conversation with someone?",
-        option1:"Disrespect them",
-        option2:"Introduce yourself",
-        option3:"Talk about only yourself",
-        option4:"Ignore them",
-        Answer: "B",
+        question: "Why are social skills important?",
+        option1:"A. You can make more friends",
+        option2:"B. You can understand how other people feel",
+        option3:"C. You can experience less conflict",
+        option4:"D. All of the above",
+        Answer: "D",
 
     },
     {
-        question: "What is an appropriate way to give a compliment?",
-        option1: "Be specific and genuine",
-        option2:"The way you stand",
-        option3:"your behavior",
-        option4:"Give a fake compliment",
-        Answer: "A",
+        question: "Which of the following are Social Skills?",
+        option1:"A. Communication Skills",
+        option2:"B. Listening Skills",
+        option3:"C. Conflict Resolution",
+        option4:"D. All of the above",
+        Answer: "D",
     },
     {
-        question: "Why is making eye contact important?",
-        option1: "It helps show confidence and attentiveness",
-        option2:"It makes people feel uncomfortable",
-        option3:"It is not important at all",
-        option4:"All of the above",
-        Answer: "A",
-
-    },
-    {
-        question: "How would you show respect in a conversation?",
-        option1: "Intterupt",
-        option2:"Make facial expressions when you disagree",
-        option3:"Be engaged and wait when its appropriate to speak",
-        option4:"Talk loud to make your point clear",
+        question: "What does the C stand for in S.O.C.I.A.B.L.E?",
+        option1:"A. Cat",
+        option2:"B. Cute",
+        option3:"C. Courage",
+        option4:"D. Confident",
         Answer: "C",
+
+    },
+    {
+        question: "Just like any other skill Social Skills takes...",
+        option1:"A. Practice",
+        option2:"B. Nothing",
+        option3:"C. Choices A and B",
+        option4:"D. All of the above",
+        Answer: "A",
 
     },
 
