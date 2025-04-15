@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import './amtest.css'
 import questionbank2 from "../Components/Assets/questionbank2";
 import supabase from "../helper/supabaseClient";
+import { NavLink } from "react-router-dom";
 
 /*Code for Anger Management Module */ 
 function Amtest() {
@@ -15,7 +16,7 @@ function Amtest() {
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [optionChosen, setOptionChosen] = useState("")
     const [email, setEmail] = useState("")
-    const amModheaders = ["Anger Management Presentation", testname];
+    const amModheaders = ["Anger Management Video", testname];
     const [positiveAffirmation, setPostiveAffirmation] = useState("")
     /*Fetch user from Supabase database for the quiz */
     
@@ -34,9 +35,9 @@ function Amtest() {
         document.getElementById("am-title").style.display = "none";
         document.getElementById("a-title").innerHTML = amModheaders[0];
         document.getElementById("start").hidden = true;
-        document.getElementById("ppt").style.display = "block";
+        document.getElementById("vid").style.display = "block";
         document.getElementById("startquiz").style.display = "block"
-        document.getElementById("content").innerHTML = "Go through the slides and start quiz when you are ready!!";
+        document.getElementById("content").innerHTML = "Watch the video and start the quiz when you are ready!";
 
     }
 
@@ -45,7 +46,7 @@ function Amtest() {
     const startQuiz = () => {
         document.getElementById("a-title").innerHTML = amModheaders[1];
         document.getElementById("amquestion").style.display = "block";
-        document.getElementById("ppt").style.display = "none";
+        document.getElementById("vid").style.display = "none";
         document.getElementById("startquiz").style.display = "none";
         document.getElementById("amnext-btn").style.visibility="visible"
         document.getElementById("content").style.display = "none";
@@ -141,8 +142,7 @@ function Amtest() {
     return (
         <div>
             <Header />
-            <button class="back-dashboard back" id="back" onClick={() => window.location.href = "/Dashboard"}>Back to Dashboard</button>
-
+            <NavLink exact to="/Dashboard"> <button class="back-dashboard back" id="back">Back to Dashboard</button></NavLink>
 
             <div>
                 <h3 class="test-title" id="am-title">Welcome to the Anger Management Module!</h3>
@@ -164,13 +164,16 @@ function Amtest() {
             <div class="start-btn-container" id="mod-btns"> 
                 <button class="back-dashboard quiz" id="startquiz" onClick={startQuiz}>Start Quiz</button>
                 <iframe
-                    id="ppt"
-                    src="https://1drv.ms/p/c/b9f038b663af0215/IQR_AfyLXU5sRqsnVRiPvLxtAcPCsCUbsEhzoKszXqP1Cf8?em=2&amp;wdAr=1.7777777777777777"
-                    class="ppt"
-                    width="800px"
-                    height="450px"
-                    frameborder="10">This is an embedded
-                </iframe>
+                 width="800px" 
+                 id="vid"
+                 class="vid"
+                 height="450"
+                  src="https://www.youtube.com/embed/AQIQCOY_Im0" 
+                title="Social Skills For Kids - Ways To Improve Social Skills For Elementary-Middle School" 
+                frameborder="0" 
+                allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                 </iframe>
                 <button class="back-dashboard" id="start" onClick={startModule}> Start</button>
 
             </div>

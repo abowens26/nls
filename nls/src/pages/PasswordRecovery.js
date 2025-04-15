@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
- function Recover() {
-    const [email, setEmail] = useState('')
+ function PasswordRecovery() {
     const [new_password, setNewPassword] = useState('')
 
     const[recoverStatus, setRecoverStatus] = useState('');
@@ -17,18 +16,21 @@ import { useNavigate } from "react-router-dom";
     
 
     const resetPassword = async() => {
-        const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-            redirectTo: "http://localhost:3000/PasswordRecovery",
-          });
 
-          if (error) {
-            setRecoverStatus("Email does not exist")
+        const { data, error } = await supabase.auth.updateUser({
+            password: new_password
+          })
+     
+
+          if (error) { 
+            setRecoverStatus("Could not reset password")
             console.log(error.message)
             return;
           }
 
           if (data) {
-            setRecoverStatus("If the provided email exists, a message should be sent to your email to recover the account!")
+            setRecoverStatus("Password successfully reset!")
+            navigate("/Login")
           }
     }
 
@@ -44,11 +46,11 @@ import { useNavigate } from "react-router-dom";
             <div class="login-container">
                 <h2 class="login-title">Recover Account</h2>
                 <p>{recoverStatus}</p>
-                <label for="email">Email</label>
-                <input type="email" value={email} class="login-field" placeholder="Email" onChange={(e) => {
-                    setEmail(e.target.value);
+                <label for="password">New Password</label>
+                <input type="password" value={new_password} class="login-field" placeholder="New Password" onChange={(e) => {
+                    setNewPassword(e.target.value);
                 }} required></input>
-                <button type="submit" class="submit-btn" onClick={resetPassword}>Send Email</button>
+                <button type="submit" class="submit-btn" onClick={resetPassword}>Submit</button>
                 <p class="signup">Don't have an account? <a href="/Signup">Sign Up</a></p>
                 <p class="signup">Already have an account? <a href="/">Login</a></p>
             </div>
@@ -72,4 +74,4 @@ import { useNavigate } from "react-router-dom";
 }
 
 
-export default Recover
+export default PasswordRecovery

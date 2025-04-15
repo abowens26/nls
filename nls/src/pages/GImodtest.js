@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import './GImodtest.css'
 import questionbank3 from "../Components/Assets/questionbank3";
 import supabase from "../helper/supabaseClient";
+import { NavLink } from "react-router-dom";
 
 
 /*Code for G.R.O.U.P Introduction Module */ 
@@ -145,7 +146,7 @@ const startModule = () => {
     return(
         <div>
          <Header />        
-         <button class="back-dashboard back" id="back" onClick={() => window.location.href = "/Dashboard"}>Back to Dashboard</button>
+         <NavLink exact to="/Dashboard"> <button class="back-dashboard back" id="back">Back to Dashboard</button></NavLink>
       
          <div class="test-title"> 
             <h1 id="mod-title">Welcome to the G.R.O.U.P Introduction Module!</h1>

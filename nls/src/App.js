@@ -10,6 +10,8 @@ import Wrapper from './pages/Wrapper.jsx';
 import Amtest from './pages/amtest.js';
 import GImodTest from './pages/GImodtest.js';
 import Recover from './pages/Recover.js';
+import PasswordRecovery from './pages/PasswordRecovery.js';
+import Admin from './pages/admin.js';
 function App() {
 
   //Available routes within application
@@ -20,6 +22,7 @@ function App() {
          <Route index element={<Login />} />
          <Route path="/Signup" element={<SignUp />} />
          <Route path="/Recover" element={<Recover />} />
+         <Route path="/PasswordRecovery" element={<PasswordRecovery />} />
          <Route path="/Dashboard" element={<Wrapper><Dashboard /></Wrapper>} />
          <Route path="/Test" element={<Wrapper><Test /></Wrapper>} />
          <Route path="/Resources" element={<Wrapper><Resources /></Wrapper>} />

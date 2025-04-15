@@ -3,7 +3,7 @@ import Header from "../Components/Header";
 import './sstest.css'
 import questionbank from "../Components/Assets/questionbank";
 import supabase from "../helper/supabaseClient";
-
+import { NavLink } from "react-router-dom";
 
 /*Code for Social Skills Module */ 
 function Sstest() {
@@ -138,7 +138,8 @@ function Sstest() {
     return (
         <div>
             <Header />
-            <button class="back-dashboard back" id="back" onClick={() => window.location.href = "/Dashboard"}>Back to Dashboard</button>
+            <NavLink exact to="/Dashboard"> <button class="back-dashboard back" id="back">Back to Dashboard</button></NavLink>
+            
 
             <div class="sstitle">
                 <h3 class="test-title" id="ss-title">Welcome to the Social Skills Module!</h3>
@@ -160,7 +161,7 @@ function Sstest() {
                   src="https://www.youtube.com/embed/IcUR8NxLdG4" 
                 title="Social Skills For Kids - Ways To Improve Social Skills For Elementary-Middle School" 
                 frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                  </iframe>
                 <button class="back-dashboard" id="start" onClick={startModule}> Start</button>
@@ -197,6 +198,7 @@ function Sstest() {
 
 
             </div>
+
 
 
 
