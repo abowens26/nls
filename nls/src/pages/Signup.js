@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Login.css"
 import { useNavigate } from "react-router-dom";
 import supabase from "../helper/supabaseClient";
@@ -9,6 +9,26 @@ function SignUp() {
     const [passwordSignup, setPasswordSignup] = useState('');
     const [message, setMessage] = useState("");
     const navigate = useNavigate();
+
+
+
+    useEffect(() => {
+    
+            let btn = document.getElementById("create");
+            const listener = (event) => {
+                if(event.code === 'Enter' || event.code === 'NumpadEnter') {
+                    event.preventDefault();
+                    btn.click()
+                    
+                }
+                
+            };
+    
+            document.addEventListener("keydown", listener);
+            return () => {
+                document.removeEventListener("keydown", listener);
+            };
+        }, []);
 
      /*Code from: https://www.youtube.com/watch?v=Q7-DI39epR8&t=2s */
      /*Source: https://github.com/arpanneupane19/react-supabase-auth */
@@ -55,7 +75,7 @@ function SignUp() {
                 <input type="password" class="login-field" placeholder="Password" value={passwordSignup} onChange={(e) => {
                     setPasswordSignup(e.target.value);
                 }} required></input>
-                <button type="submit" class="submit-btn" onClick={handleSubmit}>Create an Account</button>
+                <button id="create" type="submit" class="submit-btn" onClick={handleSubmit}>Create an Account</button>
                 <p class="signup">Already have an account? <a href="/">Login</a></p>
             </div>
 

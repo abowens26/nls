@@ -43,7 +43,12 @@ function Stressed () {
                 <li>Physical Activity/Exercise &#127947;</li>
                 <li>Relax Any Tense Muscles &#129496;</li>
                 <li>Take Time Off &#127774;</li>
+
+                <p>Watch this video for a breathing exercise!</p>
+                <iframe width="300" height="200" src="https://www.youtube.com/embed/RiMb2Bw4Ae8" title="Belly Breathing: Mindfulness for Children" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </uo>
+
+            
             </div>
             
             </div>  

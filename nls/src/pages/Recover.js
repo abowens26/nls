@@ -1,18 +1,33 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./Login.css"
 import supabase from "../helper/supabaseClient";
-import { useNavigate } from "react-router-dom";
+
 
 
 
  function Recover() {
     const [email, setEmail] = useState('')
-    const [new_password, setNewPassword] = useState('')
+
 
     const[recoverStatus, setRecoverStatus] = useState('');
-    const navigate = useNavigate();
-    
+   
+useEffect(() => {
 
+        let btn = document.getElementById("recover");
+        const listener = (event) => {
+            if(event.code === 'Enter' || event.code === 'NumpadEnter') {
+                event.preventDefault();
+                btn.click()
+                
+            }
+            
+        };
+
+        document.addEventListener("keydown", listener);
+        return () => {
+            document.removeEventListener("keydown", listener);
+        };
+    }, []);
 
     
 
@@ -48,7 +63,7 @@ import { useNavigate } from "react-router-dom";
                 <input type="email" value={email} class="login-field" placeholder="Email" onChange={(e) => {
                     setEmail(e.target.value);
                 }} required></input>
-                <button type="submit" class="submit-btn" onClick={resetPassword}>Send Email</button>
+                <button id="recover" type="submit" class="submit-btn" onClick={resetPassword}>Send Email</button>
                 <p class="signup">Don't have an account? <a href="/Signup">Sign Up</a></p>
                 <p class="signup">Already have an account? <a href="/">Login</a></p>
             </div>
