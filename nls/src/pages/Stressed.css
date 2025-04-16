@@ -12,7 +12,11 @@
 
 
 
+.yt {
 
+    border: 4px black solid;
+    border-radius: 20px;
+}
 .coping {
     padding: 10px;
     border-radius: 10px;

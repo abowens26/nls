@@ -45,7 +45,7 @@ function Stressed () {
                 <li>Take Time Off &#127774;</li>
 
                 <p>Watch this video for a breathing exercise!</p>
-                <iframe width="300" height="200" src="https://www.youtube.com/embed/RiMb2Bw4Ae8" title="Belly Breathing: Mindfulness for Children" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="yt" width="300" height="200" src="https://www.youtube.com/embed/RiMb2Bw4Ae8" title="Belly Breathing: Mindfulness for Children" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </uo>
 
             
@@ -76,7 +76,11 @@ function Stressed () {
                 <li>Social Support and Connection &#128134;</li>
                 <li>Time management and Orgnaization &#128187;</li>
                 <li>Practice Positive Self-Affirmations &#128513;</li>
+
+                <p>Watch this video for stress relief!</p>
+                <iframe class="yt" width="300" height="200" src="https://www.youtube.com/embed/L9zwduYp9G0" title="Belly Breathing: Mindfulness for Children" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </uo>
+            
             </div>
             
             </div>   

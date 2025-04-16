@@ -47,8 +47,7 @@ function SignUp() {
             return;
         }
         if(data) {
-            setMessage("User account created")
-            navigate("/")
+            setMessage("A confirmation message has been sent to your email")
             setEmailSignup("")
             setPasswordSignup("")
         }
