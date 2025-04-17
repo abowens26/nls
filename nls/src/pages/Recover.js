@@ -33,7 +33,7 @@ useEffect(() => {
 
     const resetPassword = async() => {
         const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-            redirectTo: "http://localhost:3000/PasswordRecovery",
+            redirectTo: "https://nls-topaz.vercel.app/PasswordRecovery",
           });
 
           if (error) {
