@@ -77,7 +77,7 @@ function Login() {
         
             <div class="login-container">
                 <h2 class="login-title">Login</h2>
-                <p>{loginStatus}</p>
+                <span>{loginStatus}</span>
                 <label for="email">Email</label>
                 <input type="email" value={email} class="login-field" placeholder="Email" onChange={(e) => {
                     setEmail(e.target.value);

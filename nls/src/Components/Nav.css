@@ -4,18 +4,34 @@ nav {
     background-color: rgba(159, 199, 249, 1);
     border-bottom: 2px solid black;
     padding: 20px;
-    font-weight: bold;
+    margin: auto;
+    
     
 }
 
 .nav {
-    margin: auto 
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(185, 229, 230, 1);
+    padding: 20px;
+    width: 200px;
+    border-radius: 50px;
+    border: 2px solid black
+
+
 }
 
-a:focus:ac{
-    text-decoration: underline;
+
+.nav:hover {
+    background-color: white;
+    text-decoration: none;
 }
 
+
+a:hover {
+    text-decoration: none;
+}
 
 
 @media (max-width: 768px) {

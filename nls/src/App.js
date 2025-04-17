@@ -22,7 +22,7 @@ function App() {
          <Route index element={<Login />} />
          <Route path="/Signup" element={<SignUp />} />
          <Route path="/Recover" element={<Recover />} />
-         <Route path="/PasswordRecovery" element={<PasswordRecovery />} />
+         <Route path="/PasswordRecovery" element={<Wrapper><PasswordRecovery /></Wrapper>} />
          <Route path="/Dashboard" element={<Wrapper><Dashboard /></Wrapper>} />
          <Route path="/Test" element={<Wrapper><Test /></Wrapper>} />
          <Route path="/Resources" element={<Wrapper><Resources /></Wrapper>} />

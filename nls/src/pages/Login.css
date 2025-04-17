@@ -1,6 +1,6 @@
 
 .homebody {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-image:url("../Components/Assets/Icon/5693812719358347234.png");
     background-position: center;
     height: 100vh;
