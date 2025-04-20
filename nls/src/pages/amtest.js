@@ -103,7 +103,7 @@ function Amtest() {
                  } else if (finalScore <= 39 && finalScore >= 20) {
                      setPostiveAffirmation("Better Luck Next Time!")
                  } else if (finalScore < 20) {
-                    setPostiveAffirmation(">:(")
+                    setPostiveAffirmation("Never Give Up!")
                  }
         
 

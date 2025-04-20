@@ -37,7 +37,7 @@ useEffect(() => {
           });
 
           if (error) {
-            setRecoverStatus("Email does not exist")
+            setRecoverStatus(error.message)
             console.log(error.message)
             return;
           }

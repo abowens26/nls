@@ -8,7 +8,8 @@ import image from "../Components/Assets/iStock-2161532635.jpg"
 import image2 from "../Components/Assets/iStock-2040987615.jpg"
 import image3 from "../Components/Assets/iStock-901420250.jpg"
 import supabase from "../helper/supabaseClient"
-
+import { NavLink } from "react-router-dom"
+import Footer from "../Components/Footer"
 function Dashboard() {
 
     const [email, setEmail] = useState("")
@@ -143,31 +144,25 @@ function Dashboard() {
             <Nav />
 
 
-            <h2 class="learning-statement">Today we are learning...</h2>
-            <div class="statement">
+            <h2 class="learning-statement">Today we are learning these modules!</h2>
                 <div class="test-container">
 
 
 
-                    <section class="section-2">
+                    <section class="section-2" >
                         <img class="social" src={image3}></img>
-                        <p></p>
-                        <h3 class="mod-title">G.R.O.U.P Introduction</h3>
+                        <h3 class="mod-title"><NavLink className="mod-nav" exact to="/GITest">G.R.O.U.P Introduction</NavLink></h3>
+                        
+                        <div class="score-container">
 
-
-                        <a class="test-link gp" href="/GITest"> <button class="start">Start Module!</button></a>
-
-
-                        <div class="score-container gic">
-
-                            <p class="show-recent" onClick={GiRecentScore}><button class="start">Show Recent Score</button></p>
-                            <p id="gi-recent" class="recent"> {scoreGI ? scoreGI.score : "Loading Score"}%</p>
-                        </div>
+                        
+                        <button class="show-score" onClick={GiRecentScore}>Show Recent Score</button>
+                            <span id="gi-recent" class="recent"> {scoreGI ? scoreGI.score : "Loading"}%</span>
+                       </div>
 
                     </section>
 
                     <div class="note-container">
-                        <div></div>
                         <button class="back-dashboard goal-btn" onClick={noteDropdown}> Set Goals &#8964;</button>
                         <div id="dropdown-content" class="drop">
                             <div class="textarea">
@@ -184,16 +179,15 @@ function Dashboard() {
 
                     <section>
                         <img class="social" src={image}></img>
-                        <p></p>
-                        <h3 class="mod-title">Social Skills Test</h3>
+                        <h3 class="mod-title"><NavLink className="mod-nav" exact to="/Test">Social Skills</NavLink></h3>
 
-                        <a class="test-link ss" href="/Test"> <button class="start">Start Module!</button></a>
-
+                       
 
 
-                        <div class="score-container ssc">
-                            <p class="show-recent" onClick={ShowRecentScore}> <button class="start">Show Recent Score</button></p>
-                            <p id="recent-score" class="recent">{score ? score.score : "Loading Score"}% </p>
+
+                        <div class="score-container">
+                             <button class="show-score ss " onClick={ShowRecentScore}>Show Recent Score</button>
+                            <p id="recent-score" class="recent">{score ? score.score : "Loading"}% </p>
                         </div>
 
                     </section>
@@ -219,15 +213,16 @@ function Dashboard() {
                     <section class="section-2">
                         <img class="social" src={image2}></img>
                         <p></p>
-                        <h3 class="mod-title">Anger Management</h3>
+                        <h3 class="mod-title"><NavLink className="mod-nav" exact to="/AmTest">Anger Management</NavLink></h3>
 
-                        <a class="test-link am" href="/AmTest"><button class="start">Start Module!</button></a>
+                        
 
 
 
-                        <div class="score-container amc">
-                            <p class="show-recent" onClick={AmRecentScore}> <button class="start">Show Recent Score</button></p>
-                            <p id="am-recent" class="recent"> {scoreAm ? scoreAm.score : "Loading Score"}%</p>
+                        <div class="score-container">
+                        <button class="show-score am" onClick={AmRecentScore}>Show Recent Score</button>
+                            <p id="am-recent" class="recent"> {scoreAm ? scoreAm.score : "Loading"}%</p>
+                            
                         </div>
 
                     </section>
@@ -284,10 +279,10 @@ function Dashboard() {
 
              
 
-            </div>
+          
 
 
-
+                <Footer />
 
         </div>
 

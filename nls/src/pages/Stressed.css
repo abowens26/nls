@@ -5,9 +5,10 @@
 }
 
 .anger-section {
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 
@@ -22,7 +23,14 @@
     border-radius: 10px;
     background-color: rgba(185, 229, 230, 1);
     cursor: pointer;
-    margin-left: 20px;
+    margin-left: 30px;
+    font-size: xx-large;
+    display: flex;
+    transition: background-color 0.3s;
+}
+
+.coping:hover {
+    background-color: aliceblue;
 }
 
 .anger-list {
@@ -48,9 +56,22 @@
 }
 
 
-.show {
+.show1 {
     display: block;
+    animation: fadeIn 0.5s ease-in;
 }
+
+
+.social-section {
+    display: flex;
+    flex-direction: row;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 
 @media (max-width: 768px) {
   .cope {

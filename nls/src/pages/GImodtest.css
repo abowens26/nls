@@ -18,7 +18,7 @@
     padding: 10px;
     margin-top: 20px;
     border: 3px solid black;
-    border-radius: 10px;
+    border-radius: 50px;
     margin-left: 10px;
     color: black;
 }
@@ -117,6 +117,8 @@
 .quiz {
     display: none;
     margin-bottom: 10px;
+    height: 45px;
+    width: 200px;
 }
 
 #content {

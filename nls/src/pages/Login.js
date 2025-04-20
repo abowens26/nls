@@ -60,7 +60,6 @@ function Login() {
       
 
         if (error) {
-            setLoginStatus("You need to confirm your email!")
             setLoginStatus(error.message);
             return;
         }

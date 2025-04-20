@@ -13,7 +13,7 @@ function Nav(){
             <nav>
                 <NavLink className="nav" exact to="/Dashboard">Home</NavLink> 
                 <NavLink  className="nav" exact to="/Resources">Additional Resources</NavLink>
-                <NavLink  className="nav" exact to="/Stressed">Feeling Stressed?</NavLink>
+                <NavLink  className="nav" exact to="/Stressed">Coping Strategies</NavLink>
 
             </nav>
         </div>

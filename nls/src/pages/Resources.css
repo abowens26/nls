@@ -2,6 +2,77 @@
     margin-top: 20px;
 }
 
+li {
+   margin-top: 10px;
+   list-style: none;
+}
+
+.resource-title {
+   margin-top: 20px;
+   margin-left: 40px;
+}
+
+.page-title {
+   display: flex;
+   justify-content: center;
+}
+
+.resource-list {
+   color: blue;
+}
+
+.articles {
+   background-color:  rgba(185, 229, 230, 1);
+   padding: 25px;
+   border: solid 2px black;
+   border-radius: 20px;
+  display: flex;
+   width: 1000px
+}
+
+.article-container {
+   display: flex;
+   justify-content: center;
+}
+
+.video-row {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+
+.yt{
+   margin-bottom: 20px
+}
+
+.last-row{
+   display: flex;
+   justify-content: center;
+}
+
+.videos {
+   background-color:  rgba(185, 229, 230, 1);
+   padding: 25px;
+   border: solid 2px black;
+   border-radius: 20px;
+   width: 1000px;
+   margin-top: 30px;
+
+}
+
+.video-container {
+   display: flex;
+   justify-content: center;
+}
+
+.pod {
+   margin-right: 20px;
+}
+
+.podcasts {
+   margin-top: 30px;
+   margin-bottom: 30px;
+}
 
 
 @media (max-width: 768px) {
