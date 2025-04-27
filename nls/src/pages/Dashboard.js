@@ -108,25 +108,6 @@ function Dashboard() {
     function GiRecentScore() {
         document.getElementById("gi-recent").classList.toggle("show");
     }
-
-    function noteDropdown() {
-        document.getElementById("dropdown-content").classList.toggle("show");
-    }
-
-    function ssnoteDropdown() {
-        document.getElementById("ssdropdown-content").classList.toggle("show");
-    }
-
-
-    function amnoteDropdown() {
-        document.getElementById("amdropdown-content").classList.toggle("show");
-    }
-
-    const handleSubmit = () => {
-        localStorage.setItem("Goals", goals)
-
-    }
-
    
     
 
@@ -144,14 +125,17 @@ function Dashboard() {
             <Nav />
 
 
-            <h2 class="learning-statement">Today we are learning these modules!</h2>
+            <h1 class="learning-statement">Today we are learning these modules!</h1>
                 <div class="test-container">
 
 
 
                     <section class="section-2" >
-                        <img class="social" src={image3}></img>
+                        <div class="mod-title-container">
+                        <img class="social" src="https://thumbs.dreamstime.com/b/group-children-playing-football-friends-park-153633026.jpg"></img>
                         <h3 class="mod-title"><NavLink className="mod-nav" exact to="/GITest">G.R.O.U.P Introduction</NavLink></h3>
+                        </div>
+                        
                         
                         <div class="score-container">
 
@@ -162,25 +146,16 @@ function Dashboard() {
 
                     </section>
 
-                    <div class="note-container">
-                        <button class="back-dashboard goal-btn" onClick={noteDropdown}> Set Goals &#8964;</button>
-                        <div id="dropdown-content" class="drop">
-                            <div class="textarea">
-                                <textarea id="gi-goals" class="text" onChange={(e) => { setGoals(e.target.value); }}></textarea>
-                                <button class="submit-goals" onClick={handleSubmit}>Submit</button>
-                            </div>
-                        </div>
 
 
 
-                    </div>
+                    <section class="section-2">
+                        <div class="mod-title-container">
 
-
-
-                    <section>
-                        <img class="social" src={image}></img>
+                        
+                        <img class="social" src="https://t4.ftcdn.net/jpg/05/91/40/99/240_F_591409920_XjHiNwSiy23Km2amxbvO7YTHZHOmtEzR.jpg"></img>
                         <h3 class="mod-title"><NavLink className="mod-nav" exact to="/Test">Social Skills</NavLink></h3>
-
+                       </div>
                        
 
 
@@ -192,30 +167,16 @@ function Dashboard() {
 
                     </section>
 
-                    <div class="note-container ss-goals">
-                        <button class="back-dashboard goal-btn" onClick={ssnoteDropdown}> Set Goals &#8964;</button>
-                        <div id="ssdropdown-content" class="drop">
-                            <div class="textarea">
-                                <textarea id="gi-goals" class="text" onChange={(e) => { setGoals(e.target.value); }}></textarea>
-                                <button class="submit-goals" onClick={handleSubmit}>Submit</button>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
 
 
 
 
 
                     <section class="section-2">
-                        <img class="social" src={image2}></img>
-                        <p></p>
+                        <div class="mod-title-container">
+                        <img class="social" src="https://t3.ftcdn.net/jpg/05/24/16/64/240_F_524166481_CdCg5rkxwPQvcDbdlEr1zFSMYSLhfIHl.jpg"></img>
                         <h3 class="mod-title"><NavLink className="mod-nav" exact to="/AmTest">Anger Management</NavLink></h3>
-
-                        
+                        </div>
 
 
 
@@ -227,26 +188,13 @@ function Dashboard() {
 
                     </section>
 
-                    <div class="note-container">
-                        <button class="back-dashboard goal-btn" onClick={amnoteDropdown}> Set Goals &#8964;</button>
-                        <div id="amdropdown-content" class="drop">
-                            <div class="textarea">
-                                <textarea id="gi-goals" class="text" onChange={(e) => { setGoals(e.target.value); }}></textarea>
-                                <button class="submit-goals" onClick={handleSubmit}>Submit</button>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
                     <div class="line-graph">
                     <h2></h2>
-          <Line 
+          <Bar 
                
                 data={{
                   
-                    labels: ["G.R.O.U.P Introduction Test", "Social Skills Test", "Anger Management Test" ],
+                    labels: ["G.R.O.U.P Introduction", "Social Skills", "Anger Management" ],
                     datasets: [
                         {
                             label: "Test Score",
@@ -256,7 +204,12 @@ function Dashboard() {
                 }}
                 options={{
                     maintainAspectRatio: false,
-                  
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Student Progress Through Each Skill',
+                        }
+                    },
 
                 }}
 

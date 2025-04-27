@@ -31,7 +31,7 @@ useEffect(() => {
  const[currentQuestion, setCurrentQuestion] = useState(0)
 const[optionChosen, setOptionChosen] = useState("")
 const Giheader = [" G.R.O.U.P Introduction Presentation", "G.R.O.U.P Introduction Quiz"]
-
+const progress = (currentQuestion / questionbank3.length) * 100;
 
 /*Show and hide elements when module starts */
 const startModule = () => {
@@ -40,7 +40,7 @@ const startModule = () => {
         document.getElementById("start").hidden = true;
         document.getElementById("ppt").style.display="block";
         document.getElementById("startquiz").style.display="block"
-        document.getElementById("content").innerHTML = "Go through the slides and start quiz when you are ready!!";
+        document.getElementById("content").innerHTML = "Review the slides at your own pace, then begin the quiz when you're ready.";
     }
 
    
@@ -52,7 +52,7 @@ const startModule = () => {
         document.getElementById("t-title").innerHTML = Giheader[1];
         document.getElementById("startquiz").style.display = "none";
         document.getElementById("next-btn").style.visibility='visible';
-
+        document.getElementById("progress").style.visibility='visible';
 
     }
 
@@ -99,6 +99,7 @@ const startModule = () => {
         document.getElementById("next-btn").style.display = "none";
         document.getElementById("back").style.display = "none";
         document.getElementById("t-title").style.display = "none";
+        document.getElementById("progress").style.visibility='hidden';
     
         /*Show different affirmation messages based on test score */
         if (finalScore <= 100 &&  finalScore >= 80) {
@@ -154,6 +155,9 @@ const startModule = () => {
             
          </div>
          
+        <div class="progress-container" id="progress">
+            <progress value={progress} max="100"></progress>
+         </div>
          <div class="content-container">
 
         <p id="content"></p> 
@@ -182,7 +186,7 @@ const startModule = () => {
          <button id="option4" class="back-dashboard option" onClick={() => setOptionChosen("D")} >{questionbank3[currentQuestion].option4}</button><br></br>
          
          
-
+        
          </div>
 
          <div class="grid"> 

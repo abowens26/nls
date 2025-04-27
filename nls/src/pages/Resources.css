@@ -19,6 +19,8 @@ li {
 
 .resource-list {
    color: blue;
+   font-size: x-large;
+    font-weight: normal;
 }
 
 .articles {
@@ -27,12 +29,14 @@ li {
    border: solid 2px black;
    border-radius: 20px;
   display: flex;
-   width: 1000px
+   width: 1000px;
+   display: none;
 }
 
 .article-container {
    display: flex;
    justify-content: center;
+   flex-direction: column;
 }
 
 .video-row {
@@ -57,23 +61,48 @@ li {
    border-radius: 20px;
    width: 1000px;
    margin-top: 30px;
+   display: none;
 
 }
 
 .video-container {
    display: flex;
    justify-content: center;
+   flex-direction: column;
 }
 
 .pod {
    margin-right: 20px;
+   
 }
 
-.podcasts {
-   margin-top: 30px;
-   margin-bottom: 30px;
+
+.resource-content {
+   display: flex;
+   justify-content: center;
+   animation: fadeOut 0.5s ease-out;
 }
 
+
+.show {
+   display: block;
+   animation: fadeIn 0.5s ease-in;
+}
+
+.poddrop {
+   margin-bottom: 20px;
+}
+
+@keyframes fadeOut {
+   from {opacity: 1;}
+   to {opacity: 0;}
+}
+
+
+@keyframes fadeIn {
+   from {opacity: 0;}
+   to {opacity: 1;}
+}
 
 @media (max-width: 768px) {
     .res {
@@ -84,6 +113,21 @@ li {
         margin-top: -10px;
      }
 
+     .resource-list {
+      font-size: small;
+     }
+
+     .articles {
+      width: 70%;
+     }
+
+     .videos {
+      width: 70%;
+     }
+
+     .pod {
+      width: 70%;
+     }
 
 }
 
@@ -97,4 +141,30 @@ li {
     margin-top: -30px;
  }
 
+ .articles {
+   width: 70%;
+  }
+
+  .videos {
+   width: 70%;
+  }
+
+  .pod {
+   width: 70%;
+  }
+
+  .yt {
+   height: 150px;
+   width: 200px;
+  }
+
+  .resource-title {
+   font-size: medium;
+  }
+
+  .video-row {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+}
 }

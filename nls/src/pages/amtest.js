@@ -16,8 +16,9 @@ function Amtest() {
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [optionChosen, setOptionChosen] = useState("")
     const [email, setEmail] = useState("")
-    const amModheaders = ["Anger Management Video", testname];
+    const amModheaders = ["Anger Management Presentation", testname];
     const [positiveAffirmation, setPostiveAffirmation] = useState("")
+    const progress = (currentQuestion / questionbank2.length) * 100;
     /*Fetch user from Supabase database for the quiz */
     
     useEffect(() => {
@@ -37,7 +38,7 @@ function Amtest() {
         document.getElementById("start").hidden = true;
         document.getElementById("vid").style.display = "block";
         document.getElementById("startquiz").style.display = "block"
-        document.getElementById("content").innerHTML = "Watch the video and start the quiz when you are ready!";
+        document.getElementById("content").innerHTML = "Review the slides at your own pace, then begin the quiz when you're ready.";
 
     }
 
@@ -50,6 +51,7 @@ function Amtest() {
         document.getElementById("startquiz").style.display = "none";
         document.getElementById("amnext-btn").style.visibility="visible"
         document.getElementById("content").style.display = "none";
+        document.getElementById("progress").style.visibility='visible';
     }
 
 
@@ -92,6 +94,7 @@ function Amtest() {
         document.getElementById("back").style.display = "none";
         document.getElementById("amnext-btn").style.display = "none";
         document.getElementById("a-title").style.display = "none";
+        document.getElementById("progress").style.visibility='hidden';
 
                 /*Show different affirmation messages based on test score */
                 if (finalScore <= 100 &&  finalScore >= 80) {
@@ -149,7 +152,9 @@ function Amtest() {
                 <h3 class="a-title" id="a-title"></h3>
             </div>
 
-            
+            <div class="progress-container" id="progress">
+            <progress value={progress} max="100"></progress>
+         </div>
             <div class="content-container">
 
                 <p id="content"></p>
@@ -163,17 +168,7 @@ function Amtest() {
 
             <div class="start-btn-container" id="mod-btns"> 
                 <button class="back-dashboard quiz" id="startquiz" onClick={startQuiz}>Start Quiz</button>
-                <iframe
-                 width="800px" 
-                 id="vid"
-                 class="vid"
-                 height="450"
-                  src="https://www.youtube.com/embed/AQIQCOY_Im0" 
-                title="Social Skills For Kids - Ways To Improve Social Skills For Elementary-Middle School" 
-                frameborder="0" 
-                allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                 </iframe>
+               <iframe id="vid" class="ppt" src="https://1drv.ms/p/c/b9f038b663af0215/IQTy-2tO1bBMT7fXpl107jqvAbGFvVNivlfrGg80u3PilvA?wdAr=1.7777777777777777" width="800px" height="450px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
                 <button class="back-dashboard" id="start" onClick={startModule}> Start</button>
 
             </div>

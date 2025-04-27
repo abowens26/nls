@@ -17,10 +17,10 @@
     background-color: rgba(161, 202, 246, 1);
     padding: 10px;
     margin-top: 20px;
-    border: 3px solid black;
-    border-radius: 50px;
+    border: 2px solid black;
     margin-left: 10px;
     color: black;
+    transition: background-color 0.3s;
 }
 
 .back-dashboard:hover {
@@ -30,6 +30,7 @@
 
 .option {
     box-shadow: 10px 10px 10px black;
+    padding: 20px;
 }
 
 .grid {
@@ -93,6 +94,8 @@
 
 #start {
     padding: 30px 50px 30px 50px;
+    border-radius: 20px;
+
 }
 
 .content-container {
@@ -134,10 +137,19 @@
 }
 
 .back {
-    background-color: rgb(189, 186, 186)
+    background-color: rgb(189, 186, 186);
+    border-radius: 20px;
 }
 
+.progress-container {
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
 
+progress {
+    width: 50%;
+}
 
 
 @media (max-width: 768px) {

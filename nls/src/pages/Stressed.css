@@ -37,7 +37,7 @@
     margin-top: 10px;
     display: none;
     margin-bottom: 10px;
-    list-style: circle;
+   
 }
 
 .list-container {
@@ -51,8 +51,9 @@
     border: solid 2px black;
     border-radius: 20px;
     font-size: x-large;
-    font-weight: bold;
-    width: 950px
+    font-weight: normal;
+    width: 950px;
+    list-style: circle;
 }
 
 
@@ -96,10 +97,12 @@ button {
  }
 
  .coping {
-    padding: 10px 0px 10px 0px;
+ 
     border-radius: 20px;
     background-color: rgba(185, 229, 230, 1);
-    font-size: small;
+    font-size: medium;
+    margin-left: 225px;
+    margin-top: -30px;
 }
 
 .list {

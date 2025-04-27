@@ -13,7 +13,7 @@ function Sstest() {
     const [score, setScore] = useState(0)
     const finalScore = (score / questionbank.length) * 100
     const roundedScore = Math.round(finalScore * 10) / 10
-    const ssModheaders = ["Social Skills Video", testname];
+    const ssModheaders = ["Social Skills Presentation", testname];
     const [positiveAffirmation, setPostiveAffirmation] = useState("")
 
 /*Fetch user from Supabase database for test */
@@ -30,6 +30,7 @@ function Sstest() {
     /*Initialize question and option variables */
     const [currentQuestion, setCurrentQuestion] = useState(0)
     const [optionChosen, setOptionChosen] = useState("")
+    const progress = (currentQuestion / questionbank.length) * 100;
 
     /*Show and hide elements when module starts */
     const startModule = () => {
@@ -38,7 +39,7 @@ function Sstest() {
         document.getElementById("start").hidden = true;
         document.getElementById("vid").style.display = "block";
         document.getElementById("startquiz").style.display = "block"
-        document.getElementById("content").innerHTML = "Watch the video and start the quiz when you are ready!";
+        document.getElementById("content").innerHTML = "Review the slides at your own pace, then begin the quiz when you're ready.";
 
     }
 
@@ -51,7 +52,7 @@ function Sstest() {
         document.getElementById("startquiz").style.display = "none";
         document.getElementById("next-btn").style.visibility = "visible";
         document.getElementById("content").style.display = "none";
-
+        document.getElementById("progress").style.visibility='visible';
 
     }
 
@@ -91,6 +92,7 @@ function Sstest() {
         document.getElementById("back").style.display = "none";
         document.getElementById("next-btn").style.display = "none";
         document.getElementById("s-title").style.display = "none";
+        document.getElementById("progress").style.visibility='hidden';
 
         /*Show different affirmation messages based on test score */
         if (finalScore <= 100 &&  finalScore >= 80) {
@@ -147,23 +149,16 @@ function Sstest() {
             </div>
 
 
+            <div class="progress-container" id="progress">
+            <progress value={progress} max="100"></progress>
+         </div>
             <div class="content-container">
                 <p id="content"></p>
             </div>
 
             <div class="start-btn-container" id="mod-btns">
                 <button class="back-dashboard quiz" id="startquiz" onClick={startQuiz}>Start Quiz</button>
-                <iframe
-                 width="800px" 
-                 id="vid"
-                 class="vid"
-                 height="450"
-                  src="https://www.youtube.com/embed/IcUR8NxLdG4" 
-                title="Social Skills For Kids - Ways To Improve Social Skills For Elementary-Middle School" 
-                frameborder="0" 
-                allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                 </iframe>
+                <iframe id="vid" class="ppt" src="https://1drv.ms/p/c/b9f038b663af0215/IQTnT6op1kqWTI-G83PMdWDFAYQ33Bamtmc37E9oB6XY0VE?wdAr=1.7777777777777777" width="800px" height="450px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
                 <button class="back-dashboard" id="start" onClick={startModule}> Start</button>
 
             </div>

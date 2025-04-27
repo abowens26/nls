@@ -46,11 +46,13 @@ function SignUp() {
             setMessage(error.message);
             return;
         }
+        
         if(data) {
-            setMessage("A confirmation message has been sent to your email")
-            setEmailSignup("")
-            setPasswordSignup("")
+            setMessage("If the email exist, a confirmation message has been sent!")
         }
+        
+        setEmailSignup("")
+        setPasswordSignup("")
     }
 
 

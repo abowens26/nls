@@ -47,24 +47,22 @@ function Login() {
             password: password,
         });
 
-        if(data) {
-            setLoginStatus("Welcome!")  
-            
-        if(email === "alibowens3626@gmail.com") {
-            navigate("/Admin")
-        } else {
-            navigate("/Dashboard")
-        }
-        
-    }
-      
-
         if (error) {
             setLoginStatus(error.message);
             return;
         }
-       
+        
+        if(data) {
+            setLoginStatus("Welcome!")  
+            navigate("/Dashboard")
+        }
+        
+        
+        
     }
+      
+
+    
 
     
 

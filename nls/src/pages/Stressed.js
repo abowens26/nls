@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../Components/Header";
 import Nav from "../Components/Nav";
 import "./Stressed.css"
-
+import Footer from "../Components/Footer";
 
 
 function Stressed() {
@@ -35,8 +35,8 @@ function Stressed() {
             <div class="anger-container">
                 
                 <section class="anger-section">
-                    <div class="social-section"><img class="social" src="https://media.tenor.com/RyTldCkbHYIAAAAM/inside-out-angry.gif"></img>
-                        <h3 class="cope">Feeling Angry?</h3>
+                    <div class="social-section"><img class="social" src="https://t3.ftcdn.net/jpg/04/61/81/38/240_F_461813882_AXgZWIdXUl3qImbSTxm7LBKk074hvoSy.jpg"></img>
+                        <h3 class="mod-title">Feeling Angry?</h3>
                     </div>
 
                     <span class="bottom-corner">
@@ -50,7 +50,7 @@ function Stressed() {
             <div class="anger-list" id="anger">
                 <div class="list-container">
                     <ul class="list">
-                        <p>Conduct the following practices to cope with your Anger!</p>
+                        <p>Conduct the following practices to cope with your anger: </p>
                         <li>Count to 10 or 100 to help delay any impulsive reactions </li>
                         <li>Deep Breathing (10 second Intervals) </li>
                         <li>Physical Activity/Exercise </li>
@@ -68,8 +68,8 @@ function Stressed() {
             <div class="anger-container">
                 <section class="anger-section">
                     <div class="social-section">
-                        <img class="social" src="https://media.tenor.com/b1c73Q2odEMAAAAM/worried-kermit.gif"></img>
-                        <h3 class="cope">Feeling Stressed?</h3>
+                        <img class="social" src="https://t3.ftcdn.net/jpg/06/48/83/38/240_F_648833853_k37KRCVYdWUwEY3xWH31L0PqEhe2Jmp5.jpg"></img>
+                        <h3 class="mod-title">Feeling Stressed?</h3>
 
                     </div>
 
@@ -86,7 +86,7 @@ function Stressed() {
             <div class="anger-list" id="stress">
                 <div class="list-container">
                     <ul class="list">
-                        <p>Conduct the following practices to cope when you are stressed!</p>
+                        <p>Try the following practices to help cope when you are stressed: </p>
                         <li>Self-Care and Relaxation </li>
                         <li>Physical Activity/Exercise </li>
                         <li>Social Support and Connection </li>
@@ -104,8 +104,8 @@ function Stressed() {
                 <section class="anger-section">
                     <div class="social-section">
 
-                        <img class="social" src="https://media.tenor.com/BYZf0mMHcY4AAAAM/%E7%9A%849.gif"></img>
-                        <h3 class="cope">Feeling Sad?</h3>
+                        <img class="social" src="https://t3.ftcdn.net/jpg/00/01/77/56/240_F_1775674_nRpydnbG3ZNBTvaj2hMexcHZNgTH4j.jpg"></img>
+                        <h3 class="mod-title">Feeling Sad?</h3>
                     </div>
 
                     <span class="bottom-corner">
@@ -121,7 +121,7 @@ function Stressed() {
             <div class="anger-list" id="sad">
                 <div class="list-container">
                     <ul class="list">
-                        <p>Try these practices to help you cope whenm you're feeling sad:</p>
+                        <p>Try these practices to help you cope when you're feeling sad:</p>
 
                         <li>Talk to someone you trust - you are not alone!</li>
                         <li>Get outside for fresh air and sunlight </li>
@@ -140,8 +140,8 @@ function Stressed() {
                 <section class="anger-section">
                     <div class="social-section">
 
-                        <img class="social" src="https://media1.tenor.com/m/tu2sP0ZLQjIAAAAC/rainbow-spongebob.gif"></img>
-                        <h3 class="cope">Feeling Anxious?</h3>
+                        <img class="social" src="https://t4.ftcdn.net/jpg/02/37/75/39/240_F_237753910_L4jbpbqeVPDYxFp69MyiaX9ZaeSxSfXe.jpg"></img>
+                        <h3 class="mod-title">Feeling Anxious?</h3>
 
 
                     </div>
@@ -175,6 +175,7 @@ function Stressed() {
                 </div>
 
             </div>
+            <Footer />
         </div>
     )
 }
