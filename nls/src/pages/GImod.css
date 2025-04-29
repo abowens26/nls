@@ -54,20 +54,32 @@
 
 .mod-options {
     font-size: small;
-    width: 100px
-
+    width: 100px;
+    text-align: center;
 }
 
+.module-title {
+    color: black;
+    font-size: medium;
+}
 
     
 }
 
 @media (max-width: 480px) {
  
+    .module-title {
+        color: black;
+        font-size: large;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
     .mod-options {
         font-size: small;
         width: 100px;
         padding: 10px;
+        text-align: center;
     
     }
     

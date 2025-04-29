@@ -204,6 +204,15 @@ progress::-webkit-progress-value {
     #start {
         font-size: medium;
     }
+
+    .quiz-title {
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+        margin-right: 10px;
+        margin-left: 10px;
+        text-align: center;
+    }
     
 
 

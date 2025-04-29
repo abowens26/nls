@@ -23,3 +23,35 @@
     justify-content: center;
 }
 
+
+@media (max-width: 768px) {
+
+    
+    .content {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .ppt-gi {
+        height: 200px;
+        width: 350px;
+    }
+    
+        
+    }
+    
+    @media (max-width: 480px) {
+     
+        .content {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .ppt-gi {
+            height: 200px;
+            width: 350px;
+        }
+        
+    }
