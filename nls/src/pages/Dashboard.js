@@ -133,7 +133,7 @@ function Dashboard() {
                     <section class="section-2" >
                         <div class="mod-title-container">
                         <img class="social" src="https://thumbs.dreamstime.com/b/group-children-playing-football-friends-park-153633026.jpg"></img>
-                        <h3 class="mod-title"><NavLink className="mod-nav" exact to="/GITest">G.R.O.U.P Introduction</NavLink></h3>
+                        <h3 class="mod-title"><NavLink className="mod-nav" exact to="/GIMod">G.R.O.U.P Introduction</NavLink></h3>
                         </div>
                         
                         
@@ -154,7 +154,7 @@ function Dashboard() {
 
                         
                         <img class="social" src="https://t4.ftcdn.net/jpg/05/91/40/99/240_F_591409920_XjHiNwSiy23Km2amxbvO7YTHZHOmtEzR.jpg"></img>
-                        <h3 class="mod-title"><NavLink className="mod-nav" exact to="/Test">Social Skills</NavLink></h3>
+                        <h3 class="mod-title"><NavLink className="mod-nav" exact to="/SSMod">Social Skills</NavLink></h3>
                        </div>
                        
 
@@ -175,7 +175,7 @@ function Dashboard() {
                     <section class="section-2">
                         <div class="mod-title-container">
                         <img class="social" src="https://t3.ftcdn.net/jpg/05/24/16/64/240_F_524166481_CdCg5rkxwPQvcDbdlEr1zFSMYSLhfIHl.jpg"></img>
-                        <h3 class="mod-title"><NavLink className="mod-nav" exact to="/AmTest">Anger Management</NavLink></h3>
+                        <h3 class="mod-title"><NavLink className="mod-nav" exact to="/AmMod">Anger Management</NavLink></h3>
                         </div>
 
 

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Header from "../Components/Header";
-import './sstest.css'
 import questionbank from "../Components/Assets/questionbank";
 import supabase from "../helper/supabaseClient";
 import { NavLink } from "react-router-dom";
@@ -13,7 +12,6 @@ function Sstest() {
     const [score, setScore] = useState(0)
     const finalScore = (score / questionbank.length) * 100
     const roundedScore = Math.round(finalScore * 10) / 10
-    const ssModheaders = ["Social Skills Presentation", testname];
     const [positiveAffirmation, setPostiveAffirmation] = useState("")
 
 /*Fetch user from Supabase database for test */
@@ -32,56 +30,37 @@ function Sstest() {
     const [optionChosen, setOptionChosen] = useState("")
     const progress = (currentQuestion / questionbank.length) * 100;
 
-    /*Show and hide elements when module starts */
-    const startModule = () => {
-        document.getElementById("ss-title").style.display = "none";
-        document.getElementById("s-title").innerHTML = ssModheaders[0];
-        document.getElementById("start").hidden = true;
-        document.getElementById("vid").style.display = "block";
-        document.getElementById("startquiz").style.display = "block"
-        document.getElementById("content").innerHTML = "Review the slides at your own pace, then begin the quiz when you're ready.";
-
-    }
-
-
-    /*Show and hide elements when module starts */
-    const startQuiz = () => {
-        document.getElementById("s-title").innerHTML = ssModheaders[1];
-        document.getElementById("ssquestion").style.display = "block";
-        document.getElementById("vid").style.display = "none";
-        document.getElementById("startquiz").style.display = "none";
-        document.getElementById("next-btn").style.visibility = "visible";
-        document.getElementById("content").style.display = "none";
-        document.getElementById("progress").style.visibility='visible';
-
-    }
-
-    /*Switch to next question when user clicks the "next" button*/
     const nextQuestion = () => {
 
-         /*Increases the score if user picks correct answer*/
-        if (questionbank[currentQuestion].Answer === optionChosen) {
+        /*Increases the score if user picks correct answer*/
+        if(questionbank[currentQuestion].Answer === optionChosen) {
             setScore(score + 1);
         }
+
+
         setCurrentQuestion(currentQuestion + 1);
     }
 
 
+   //Saves test score into database and calcuates test score
     const submitQuiz = async () => {
-        let newtestScore = score;
 
-        if (questionbank[currentQuestion].Answer === optionChosen) {
+        let newtestScore=score;
+
+
+        if(questionbank[currentQuestion].Answer === optionChosen) {
             newtestScore = score + 1
             setScore(newtestScore);
         }
 
-          /*Calculates score percentage based on how well user does */
+        /*Calculates score percentage based on how well user does */
         const finalScore = (newtestScore / questionbank.length) * 100
-         /*Rounds the score to the nearest tenth */
+        /*Rounds the score to the nearest tenth */
         const roundedScore = Math.round(finalScore * 10) / 10
-         /*Insert score into local storage so user can access in dashboard (this is subject to change due to security purposes)  */
-        localStorage.setItem("finalScore", roundedScore)
-          /*Show and hide elements when quiz ends */
+
+           /*Insert score into local storage so user can access in dashboard (this is subject to change due to security purposes)  */
+       localStorage.setItem("GifinalScore", (roundedScore)); 
+           /*Show and hide elements when quiz ends */
         document.getElementById("submit").hidden = true;
         document.getElementById("option1").hidden = true;
         document.getElementById("option2").hidden = true;
@@ -89,31 +68,31 @@ function Sstest() {
         document.getElementById("option4").hidden = true;
         document.getElementById("question").hidden = true;
         document.getElementById("box-score").classList.toggle("show");
-        document.getElementById("back").style.display = "none";
         document.getElementById("next-btn").style.display = "none";
-        document.getElementById("s-title").style.display = "none";
+        document.getElementById("back").style.display = "none";
         document.getElementById("progress").style.visibility='hidden';
-
+        document.getElementById("quiz-title").style.display="none"
+    
         /*Show different affirmation messages based on test score */
         if (finalScore <= 100 &&  finalScore >= 80) {
-            setPostiveAffirmation("Great Job! :)")
-         } else if (finalScore <= 79 && finalScore >= 60) {
-             setPostiveAffirmation("You're Almost there!")
-         } else if (finalScore <= 59 && finalScore >= 40) {
-            setPostiveAffirmation("Keep Going!")
-         } else if (finalScore <= 39 && finalScore >= 20) {
-             setPostiveAffirmation("Better Luck Next Time!")
-         } else if (finalScore < 20) {
-            setPostiveAffirmation("Never Give Up!")
-         }
+           setPostiveAffirmation("Great Job! :)")
+        } else if (finalScore <= 79 && finalScore >= 60) {
+            setPostiveAffirmation("You're Almost there!")
+        } else if (finalScore <= 59 && finalScore >= 40) {
+           setPostiveAffirmation("Keep Going!")
+        } else if (finalScore <= 39 && finalScore >= 20) {
+            setPostiveAffirmation("Better Luck Next Time!")
+        } else if (finalScore < 20) {
+           setPostiveAffirmation("Never Give Up!")
+        }
 
-         /*Post and save score into mongoDB atlas database */
+        /*Post and save score into mongoDB atlas database */
         try {
             await fetch("https://nls-api.onrender.com/api/score", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
-                },
+                }, 
 
                 body: JSON.stringify({
                     testname: testname,
@@ -127,74 +106,64 @@ function Sstest() {
             console.log("unable to save score", error)
         }
 
-    };
+    }
 
 
 
 
 
+    
+   
 
-
-
-
-    return (
+    
+    return(
         <div>
-            <Header />
-            <NavLink exact to="/Dashboard"> <button class="back-dashboard back" id="back">Back to Dashboard</button></NavLink>
-            
-
-            <div class="sstitle">
-                <h3 class="test-title" id="ss-title">Welcome to the Social Skills Module!</h3>
-                <h3 class="s-title" id="s-title"></h3>
-            </div>
-
-
-            <div class="progress-container" id="progress">
+         <Header />        
+         <NavLink exact to="/SSMod"> <button class="back-dashboard back" id="back">Back to Module Home</button></NavLink>
+      
+      <div class="quiz-title" id="quiz-title">
+         <h1>Social Skills Quiz</h1>
+      </div>
+        
+        <div class="progress-container" id="progress">
             <progress value={progress} max="100"></progress>
          </div>
-            <div class="content-container">
-                <p id="content"></p>
+         <div class="content-container">
+
+        <p id="content"></p> 
+      
+
+        </div>
+
+       
+         <div class="question" id="q-container" >
+            <p id="question">{questionbank[currentQuestion].question}</p>
+         <button id="option1" class="back-dashboard option" onClick={() => setOptionChosen("A")} >{questionbank[currentQuestion].option1}</button><br></br>
+         <button id="option2" class="back-dashboard option" onClick={() => setOptionChosen("B")} >{questionbank[currentQuestion].option2}</button><br></br>
+         <button id="option3" class="back-dashboard option" onClick={() => setOptionChosen("C")} >{questionbank[currentQuestion].option3}</button><br></br>
+         <button id="option4" class="back-dashboard option" onClick={() => setOptionChosen("D")} >{questionbank[currentQuestion].option4}</button><br></br>
+         
+         
+        
+         </div>
+
+         <div class="grid"> 
+             <button id="submit" class="back-dashboard submit" onClick={submitQuiz} disabled={currentQuestion !== questionbank.length -1}>Submit</button>
+         <button class="back-dashboard next" id="next-btn" onClick={nextQuestion} disabled={currentQuestion === questionbank.length -1}>Next</button> 
+         </div>
+         
+         <div class="final-score-box" id="box-score">
+            <div class="final-score-container">
+               <h2 class="final-score">{roundedScore}%</h2><br></br>  
             </div>
-
-            <div class="start-btn-container" id="mod-btns">
-                <button class="back-dashboard quiz" id="startquiz" onClick={startQuiz}>Start Quiz</button>
-                <iframe id="vid" class="ppt" src="https://1drv.ms/p/c/b9f038b663af0215/IQTnT6op1kqWTI-G83PMdWDFAYQ33Bamtmc37E9oB6XY0VE?wdAr=1.7777777777777777" width="800px" height="450px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
-                <button class="back-dashboard" id="start" onClick={startModule}> Start</button>
-
-            </div>
-
-
-
-            <div id="ssquestion" class="question">
-                <p id="question">{questionbank[currentQuestion].question}</p>
-                <button id="option1" class="back-dashboard option" onClick={() => setOptionChosen("A")} >{questionbank[currentQuestion].option1}</button><br></br>
-                <button id="option2" class="back-dashboard option" onClick={() => setOptionChosen("B")} >{questionbank[currentQuestion].option2}</button><br></br>
-                <button id="option3" class="back-dashboard option" onClick={() => setOptionChosen("C")} >{questionbank[currentQuestion].option3}</button><br></br>
-                <button id="option4" class="back-dashboard option" onClick={() => setOptionChosen("D")} >{questionbank[currentQuestion].option4}</button><br></br>
-
-
-
-            </div>
-
-            <div class="grid">
-                <button id="submit" class="back-dashboard submit" onClick={submitQuiz} disabled={currentQuestion !== questionbank.length - 1}>Submit</button>
-                <button class="back-dashboard quiz-ss" id="next-btn" onClick={nextQuestion} disabled={currentQuestion === questionbank.length - 1}>Next</button>
-
-            </div>
-
-            <div class="final-score-box" id="box-score">
-                <div class="final-score-container">
-                    <h2 class="final-score">{roundedScore}%</h2><br></br>
-                </div>
-                <h2 class="final-score-container" id="message">{positiveAffirmation}</h2>
-                <div class="final-score-container">
-                    <button class="back-dashboard back" onClick={() => window.location.href = "/Dashboard"}>Back to Dashboard</button>
-                </div>
-
-
-            </div>
-
-
+            <h2 class="final-score-container" id="message">{positiveAffirmation}</h2>
+           <div class="final-score-container">
+            <button class="back-dashboard back" onClick={() => window.location.href = "/Dashboard"}>Back to Dashboard</button>
+           </div>
+            
+         
+         </div>
+        
 
 
 
@@ -204,5 +173,6 @@ function Sstest() {
         </div>
     )
 }
+
 
 export default Sstest

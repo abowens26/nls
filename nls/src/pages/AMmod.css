@@ -1,0 +1,50 @@
+.mod {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left-side, .right-side {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.background-am {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://t3.ftcdn.net/jpg/05/24/16/64/240_F_524166481_CdCg5rkxwPQvcDbdlEr1zFSMYSLhfIHl.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+}
+
+.right-side {
+    background-color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.module-title {
+    color: black;
+    font-size: 2.5rem;
+}
+
+.mod-options {
+    background-color: rgba(185, 229, 230, 1);
+    padding: 20px;
+    width: 200px;
+    border-radius: 20px;
+    border: 2px solid black;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s ease-in;
+}
+
+.mod-options:hover {
+    background-color: white;
+    text-decoration: none;
+}

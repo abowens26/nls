@@ -9,7 +9,7 @@
 .question {
     margin-left: 25px;
     margin-bottom: 25px;
-    display: none
+   display: block;
     
 }
 
@@ -44,7 +44,8 @@
 .next {
     padding: 15px 30px 15px 30px;
     background-color:  rgb(189, 186, 186);
-    visibility: hidden;
+    visibility: visible;
+    margin-bottom: 30px;
 }
 
 .next:hover {
@@ -79,6 +80,7 @@
 .submit {
     padding: 15px 30px 15px 30px;
     background-color:  rgb(189, 186, 186);
+    margin-bottom: 30px;
 }
 
 .submit:disabled {
@@ -111,7 +113,6 @@
 }
 
 .ppt {
-    display: none;
     border: 10px solid black;
     border-radius: 20px;
     
@@ -144,13 +145,24 @@
 .progress-container {
     display: flex;
     justify-content: center;
-    visibility: hidden;
+  
 }
 
 progress {
     width: 50%;
 }
 
+progress::-webkit-progress-bar {
+    background-color: rgb(178, 255, 255);
+}
+progress::-webkit-progress-value {
+    background-color: #04af2f;
+}
+.quiz-title {
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
 
 @media (max-width: 768px) {
     .t-title {

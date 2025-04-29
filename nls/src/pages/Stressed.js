@@ -40,7 +40,7 @@ function Stressed() {
                     </div>
 
                     <span class="bottom-corner">
-                        <button class="coping" onClick={dropAnger}>&#129171; </button>
+                        <button class="coping" onClick={dropAnger}>^ </button>
                     </span>
 
                 </section>
@@ -74,7 +74,7 @@ function Stressed() {
                     </div>
 
                     <span class="bottom-corner">
-                        <button class="coping" onClick={dropStress}>&#129171; </button>
+                        <button class="coping" onClick={dropStress}>^ </button>
                     </span>
 
                 </section>
@@ -109,7 +109,7 @@ function Stressed() {
                     </div>
 
                     <span class="bottom-corner">
-                        <button class="coping" onClick={dropSad}>&#129171; </button>
+                        <button class="coping" onClick={dropSad}>^ </button>
                     </span>
 
                 </section>
@@ -148,7 +148,7 @@ function Stressed() {
 
                     <span class="bottom-corner">
                         <div class="cope-btn-container">
-                            <button class="coping" onClick={dropAnx}>&#129171; </button>
+                            <button class="coping" onClick={dropAnx}>^ </button>
                         </div>
 
                     </span>

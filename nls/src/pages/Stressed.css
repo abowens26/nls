@@ -27,6 +27,7 @@
     font-size: xx-large;
     display: flex;
     transition: background-color 0.3s;
+    rotate: 180deg;
 }
 
 .coping:hover {

@@ -1,0 +1,74 @@
+.mod {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left-side, .right-side {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://thumbs.dreamstime.com/b/group-children-playing-football-friends-park-153633026.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+}
+
+.right-side {
+    background-color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.module-title {
+    color: black;
+    font-size: 2.5rem;
+}
+
+.mod-options {
+    background-color: rgba(185, 229, 230, 1);
+    padding: 20px;
+    width: 200px;
+    border-radius: 20px;
+    border: 2px solid black;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s ease-in;
+}
+
+.mod-options:hover {
+    background-color: white;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+
+.mod-options {
+    font-size: small;
+    width: 100px
+
+}
+
+
+    
+}
+
+@media (max-width: 480px) {
+ 
+    .mod-options {
+        font-size: small;
+        width: 100px;
+        padding: 10px;
+    
+    }
+    
+}

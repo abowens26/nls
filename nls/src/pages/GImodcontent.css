@@ -1,0 +1,25 @@
+.ppt-gi {
+    display: flex;
+    justify-content: center;
+    border: 2px black solid;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.ppt-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.content-title {
+    display: flex;
+    justify-content: center;
+}
+
+.content-p {
+    display: flex;
+    justify-content: center;
+}
+

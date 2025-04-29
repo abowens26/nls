@@ -40,7 +40,7 @@ function Resources() {
                         </div>
 
                         <span class="bottom-corner">
-                            <button class="coping" onClick={dropArticle} >&#129171; </button>
+                            <button class="coping" onClick={dropArticle} >^ </button>
                         </span>
 
                     </section>
@@ -72,7 +72,7 @@ function Resources() {
                         </div>
 
                         <span class="bottom-corner">
-                            <button class="coping" onClick={dropVideo}>&#129171; </button>
+                            <button class="coping" onClick={dropVideo}> ^ </button>
                         </span>
 
                     </section>
@@ -160,7 +160,7 @@ function Resources() {
                         </div>
 
                         <span class="bottom-corner">
-                            <button class="coping" onClick={dropPod} >&#129171; </button>
+                            <button class="coping" onClick={dropPod} >^ </button>
                         </span>
 
                     </section>

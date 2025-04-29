@@ -34,27 +34,11 @@ const Giheader = [" G.R.O.U.P Introduction Presentation", "G.R.O.U.P Introductio
 const progress = (currentQuestion / questionbank3.length) * 100;
 
 /*Show and hide elements when module starts */
-const startModule = () => {
-        document.getElementById("mod-title").hidden = true;
-        document.getElementById("t-title").innerHTML = Giheader[0];
-        document.getElementById("start").hidden = true;
-        document.getElementById("ppt").style.display="block";
-        document.getElementById("startquiz").style.display="block"
-        document.getElementById("content").innerHTML = "Review the slides at your own pace, then begin the quiz when you're ready.";
-    }
+
 
    
 /*Show and hide elements when quiz starts */
-    const startQuiz = () => {
-        document.getElementById("q-container").style.display="block"
-        document.getElementById("content").style.display="none"
-        document.getElementById("mod-btns").style.display="none"
-        document.getElementById("t-title").innerHTML = Giheader[1];
-        document.getElementById("startquiz").style.display = "none";
-        document.getElementById("next-btn").style.visibility='visible';
-        document.getElementById("progress").style.visibility='visible';
 
-    }
 
 
 /*Switch to next question when user clicks the "next" button*/
@@ -98,8 +82,8 @@ const startModule = () => {
         document.getElementById("box-score").classList.toggle("show");
         document.getElementById("next-btn").style.display = "none";
         document.getElementById("back").style.display = "none";
-        document.getElementById("t-title").style.display = "none";
         document.getElementById("progress").style.visibility='hidden';
+        document.getElementById("quiz-title").style.display="none"
     
         /*Show different affirmation messages based on test score */
         if (finalScore <= 100 &&  finalScore >= 80) {
@@ -147,37 +131,18 @@ const startModule = () => {
     return(
         <div>
          <Header />        
-         <NavLink exact to="/Dashboard"> <button class="back-dashboard back" id="back">Back to Dashboard</button></NavLink>
+         <NavLink exact to="/GIMod"> <button class="back-dashboard back" id="back">Back to Module Home</button></NavLink>
       
-         <div class="test-title"> 
-            <h1 id="mod-title">Welcome to the G.R.O.U.P Introduction Module!</h1>
-             <h3 class="t-title" id="t-title"></h3> 
-            
-         </div>
-         
+      <div class="quiz-title" id="quiz-title">
+         <h1>G.R.O.U.P Introduction Quiz</h1>
+      </div>
+        
         <div class="progress-container" id="progress">
             <progress value={progress} max="100"></progress>
          </div>
-         <div class="content-container">
-
-        <p id="content"></p> 
       
 
-        </div>
-
-        <div class="start-btn-container" id="mod-btns">  
-        <button class="back-dashboard quiz" id="startquiz" onClick={startQuiz}>Start Quiz</button>
-        <iframe 
-        id="ppt"
-        src="https://1drv.ms/p/c/b9f038b663af0215/IQR_AfyLXU5sRqsnVRiPvLxtAcPCsCUbsEhzoKszXqP1Cf8?em=2&amp;wdAr=1.7777777777777777" 
-        class="ppt"
-        width="800px" 
-        height="450px" 
-        frameborder="10">This is an embedded 
-        </iframe>
-               <button class="back-dashboard" id="start" onClick={startModule}> Start</button>
-              
-        </div>
+       
          <div class="question" id="q-container" >
             <p id="question">{questionbank3[currentQuestion].question}</p>
          <button id="option1" class="back-dashboard option" onClick={() => setOptionChosen("A")} >{questionbank3[currentQuestion].option1}</button><br></br>
