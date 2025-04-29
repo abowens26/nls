@@ -11,7 +11,7 @@ function SSModContent () {
                  <h1>Social Skills Presentation</h1>
             </div>
             <div class="content-p">
-                <p>Review the slides at your own pace</p>
+                <p>Review the slides at your own pace!</p>
             </div>
              
         <div class="ppt-container">

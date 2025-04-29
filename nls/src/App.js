@@ -19,6 +19,7 @@ import GIModContent from './pages/GImodcontent.js';
 import SSModContent from './pages/SSmodcontent.js';
 import AMModContent from './pages/AMmodcontent.js';
 import GIModIntro from './pages/GIModIntro.js';
+import Welcome from './pages/Welcome.js';
 function App() {
 
   //Available routes within application
@@ -34,7 +35,6 @@ function App() {
          <Route path="/Dashboard" element={<Wrapper><Dashboard /></Wrapper>} />
          <Route path="/Test" element={<Wrapper><Test /></Wrapper>} />
          <Route path="/Resources" element={<Wrapper><Resources /></Wrapper>} />
-         <Route path="/Stressed" element={<Wrapper><Stressed /></Wrapper>} />
          <Route path="/AmTest" element={<Wrapper><Amtest /></Wrapper>} />
          <Route path="/GITest" element={<Wrapper><GImodTest /> </Wrapper>} />
          <Route path="/GIMod" element={<Wrapper><GiMod /> </Wrapper>} />
@@ -44,6 +44,7 @@ function App() {
          <Route path="/SSMod" element={<Wrapper><SSmod /> </Wrapper>} />
          <Route path="/SSModContent" element={<Wrapper><SSModContent /> </Wrapper>} />
          <Route path="/GImodintro" element={<Wrapper><GIModIntro /> </Wrapper>} />
+         <Route path="/Welcome" element={<Wrapper><Welcome /> </Wrapper>} />
          </Routes>
       </BrowserRouter>
      

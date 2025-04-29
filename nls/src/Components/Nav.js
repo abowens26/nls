@@ -11,9 +11,10 @@ function Nav(){
     return (
         <div class="nav-body">
             <nav>
-                <NavLink className="nav" exact to="/Dashboard">Home</NavLink> 
+                <NavLink className="nav" exact to="/Welcome">Home</NavLink> 
+                <NavLink className="nav" exact to="/Dashboard">Modules</NavLink> 
                 <NavLink  className="nav" exact to="/Resources">Additional Resources</NavLink>
-                <NavLink  className="nav" exact to="/Stressed">Coping Strategies</NavLink>
+                
 
             </nav>
         </div>

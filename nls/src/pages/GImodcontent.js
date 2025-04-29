@@ -11,7 +11,7 @@ function GIModContent () {
                  <h1>G.R.O.U.P Introduction Presentation</h1>
             </div>
             <div class="content-p">
-                <p>Review the slides at your own pace</p>
+                <p>Review the slides at your own pace!</p>
             </div>
              
         <div class="ppt-container">

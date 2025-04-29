@@ -54,7 +54,7 @@ function Login() {
         
         if(data) {
             setLoginStatus("Welcome!")  
-            navigate("/Dashboard")
+            navigate("/Welcome")
         }
         
         

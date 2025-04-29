@@ -125,7 +125,7 @@ function Dashboard() {
             <Nav />
 
 
-            <h1 class="learning-statement">Today we are learning these modules!</h1>
+            <h1 class="learning-statement">Modules</h1>
                 <div class="test-container">
 
 
