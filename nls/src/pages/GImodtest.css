@@ -14,7 +14,6 @@
 }
 
 .back-dashboard {
-    background-color: rgba(161, 202, 246, 1);
     padding: 10px;
     margin-top: 20px;
     border: 2px solid black;
@@ -24,11 +23,12 @@
 }
 
 .back-dashboard:hover {
-    background-color:  rgb(230, 248, 248);
+    background-color:  rgb(253, 253, 253);
     cursor: pointer;
 }
 
 .option {
+    background-color: rgba(185, 229, 230, 1);
     box-shadow: 10px 10px 10px black;
     padding: 20px;
 }

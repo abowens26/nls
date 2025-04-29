@@ -2,6 +2,7 @@ import Header from "../Components/Header"
 import './Welcome.css'
 import Nav from "../Components/Nav"
 import { NavLink } from "react-router-dom"
+import Footer from "../Components/Footer"
 function Welcome() {
     return (
         <div>
@@ -26,6 +27,8 @@ function Welcome() {
                        <NavLink  className="mod-options" exact to="/Dashboard">Modules</NavLink>
             </div>
         </div>
+
+        < Footer />
     </div>   
 )
 }

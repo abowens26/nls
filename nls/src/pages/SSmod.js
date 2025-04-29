@@ -13,7 +13,7 @@ function SSmod() {
             </div>
             <div className="right-side">
                 <h1 className="module-title">Social Skills</h1>
-                <NavLink className="mod-options" exact to="">Introduction</NavLink> 
+                <NavLink className="mod-options" exact to="/SSmodintro">Introduction</NavLink> 
                 <NavLink  className="mod-options" exact to="/SSModContent">Module Content</NavLink>
                 <NavLink  className="mod-options" exact to="/Test">Quiz</NavLink>
                 <NavLink  className="mod-options" exact to="/Dashboard">Back to Dashboard</NavLink>

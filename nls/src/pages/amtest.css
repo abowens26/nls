@@ -21,11 +21,12 @@
 }
 
 .back-dashboard:hover {
-    background-color:  rgb(230, 248, 248);
+    background-color:  rgb(247, 247, 247);
     cursor: pointer;
 }
 
 .option {
+    background-color: rgba(185, 229, 230, 1);
     box-shadow: 10px 10px 10px black;
 }
 

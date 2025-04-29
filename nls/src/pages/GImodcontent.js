@@ -23,7 +23,7 @@ function GIModContent () {
         width="800px" 
         height="450px" 
         frameborder="10"
-        loading="eager">This is an embedded 
+        loading="eager">
         </iframe> 
          </div>
         </div>

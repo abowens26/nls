@@ -13,7 +13,7 @@ function AmMod() {
             </div>
             <div className="right-side">
                 <h1 className="module-title">Anger Management</h1>
-                <NavLink className="mod-options" exact to="">Introduction</NavLink> 
+                <NavLink className="mod-options" exact to="/AMmodintro">Introduction</NavLink> 
                 <NavLink  className="mod-options" exact to="/AMModContent">Module Content</NavLink>
                 <NavLink  className="mod-options" exact to="/AmTest">Quiz</NavLink>
                 <NavLink  className="mod-options" exact to="/Dashboard">Back to Dashboard</NavLink>

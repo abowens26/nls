@@ -20,6 +20,8 @@ import SSModContent from './pages/SSmodcontent.js';
 import AMModContent from './pages/AMmodcontent.js';
 import GIModIntro from './pages/GIModIntro.js';
 import Welcome from './pages/Welcome.js';
+import SSModIntro from './pages/SSModIntro.js';
+import AMModIntro from './pages/AMModIntro.js';
 function App() {
 
   //Available routes within application
@@ -45,6 +47,8 @@ function App() {
          <Route path="/SSModContent" element={<Wrapper><SSModContent /> </Wrapper>} />
          <Route path="/GImodintro" element={<Wrapper><GIModIntro /> </Wrapper>} />
          <Route path="/Welcome" element={<Wrapper><Welcome /> </Wrapper>} />
+         <Route path="/SSmodintro" element={<Wrapper><SSModIntro /> </Wrapper>} />
+         <Route path="/AMmodintro" element={<Wrapper><AMModIntro /> </Wrapper>} />
          </Routes>
       </BrowserRouter>
      
