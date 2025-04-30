@@ -21,6 +21,7 @@ function Landing() {
 
         <div class="homebody">
         
+        
         <NavLink className="nav landing" exact to="/Login">Login</NavLink> 
         <NavLink  className="nav landing" exact to="/SignUp">Create an Account</NavLink>
         </div>
