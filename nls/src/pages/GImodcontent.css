@@ -27,7 +27,7 @@
 @media (max-width: 768px) {
 
     
-    .content {
+    .content-title {
         display: flex;
         justify-content: center;
         text-align: center;
@@ -43,7 +43,7 @@
     
     @media (max-width: 480px) {
      
-        .content {
+        .content-title {
             display: flex;
             justify-content: center;
             text-align: center;
