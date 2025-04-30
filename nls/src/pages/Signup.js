@@ -48,7 +48,7 @@ function SignUp() {
         }
         
         if(data) {
-            setMessage("If the email exist, a confirmation message has been sent!")
+            setMessage("If the email exists, a confirmation message has been sent!")
         }
         
         setEmailSignup("")
