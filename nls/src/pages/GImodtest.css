@@ -33,6 +33,12 @@
     padding: 20px;
 }
 
+.option:focus {
+    background-color:  rgb(253, 253, 253);;
+}
+
+
+
 .grid {
     display: flex;
     justify-content: flex-end;

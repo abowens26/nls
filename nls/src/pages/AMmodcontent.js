@@ -2,6 +2,7 @@
 import Header from "../Components/Header"
 import "./GImodcontent.css"
 import { NavLink } from "react-router-dom"
+import Footer from "../Components/Footer"
 function AMModContent () {
     return (
         <div>
@@ -11,7 +12,7 @@ function AMModContent () {
                  <h1>Anger Management Video</h1>
             </div>
             <div class="content-p">
-                <p>Watch this video at your own pace!</p>
+                <p>Please wait for the video to fully load before viewing it at your own pace.</p>
             </div>
              
         <div class="ppt-container">
@@ -24,6 +25,8 @@ function AMModContent () {
         frameborder="10">This is an embedded 
         </iframe>
          </div>
+
+         < Footer />
         </div>
     )
 }

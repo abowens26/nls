@@ -2,6 +2,7 @@
 import Header from "../Components/Header"
 import "./GImodcontent.css"
 import { NavLink } from "react-router-dom"
+import Footer from "../Components/Footer"
 function SSModContent () {
     return (
         <div>
@@ -11,7 +12,7 @@ function SSModContent () {
                  <h1>Social Skills Presentation</h1>
             </div>
             <div class="content-p">
-                <p>Review the slides at your own pace!</p>
+                <p>Please wait for the presentation to load, then review the slides at your own pace.</p>
             </div>
              
         <div class="ppt-container">
@@ -24,6 +25,8 @@ function SSModContent () {
         frameborder="10">This is an embedded 
         </iframe>
          </div>
+
+         <Footer />
         </div>
     )
 }

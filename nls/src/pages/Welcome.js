@@ -13,6 +13,7 @@ function Welcome() {
                 <div className="background-welcome"></div>
             </div>
             <div className="right-side">
+                <h1 class="welcome-title">Welcome to the NLS App!</h1>
                 <h1 className="module-title">Building Stronger Minds Together</h1>
                 <p class="blurb">Welcome to our comprehensive psychological services program, where evidence-based group therapy helps youth, teens, 
                      and adults develop essential life skills. Our trained clinical

@@ -2,6 +2,7 @@
 import Header from "../Components/Header"
 import "./GImodcontent.css"
 import { NavLink } from "react-router-dom"
+import Footer from "../Components/Footer"
 function GIModContent () {
     return (
         <div>
@@ -11,7 +12,7 @@ function GIModContent () {
                  <h1>G.R.O.U.P Introduction Presentation</h1>
             </div>
             <div class="content-p">
-                <p>Review the slides at your own pace!</p>
+                <p>Please wait for the presentation to load, then review the slides at your own pace.</p>
             </div>
              
         <div class="ppt-container">
@@ -26,6 +27,8 @@ function GIModContent () {
         loading="eager">
         </iframe> 
          </div>
+
+         < Footer />
         </div>
     )
 }
