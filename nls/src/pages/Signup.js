@@ -77,7 +77,7 @@ function SignUp() {
                     setPasswordSignup(e.target.value);
                 }} required></input>
                 <button id="create" type="submit" class="submit-btn" onClick={handleSubmit}>Create an Account</button>
-                <p class="signup">Already have an account? <a href="/">Login</a></p>
+                <p class="signup">Already have an account? <a href="/Login">Login</a></p>
             </div>
 
         

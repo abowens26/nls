@@ -65,7 +65,7 @@ useEffect(() => {
                 }} required></input>
                 <button id="recover" type="submit" class="submit-btn" onClick={resetPassword}>Send Email</button>
                 <p class="signup">Don't have an account? <a href="/Signup">Sign Up</a></p>
-                <p class="signup">Already have an account? <a href="/">Login</a></p>
+                <p class="signup">Already have an account? <a href="/Login">Login</a></p>
             </div>
 
         

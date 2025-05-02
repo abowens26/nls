@@ -3,6 +3,8 @@ import './Welcome.css'
 import Nav from "../Components/Nav"
 import { NavLink } from "react-router-dom"
 import Footer from "../Components/Footer"
+
+//Welcome page of the application
 function Welcome() {
     return (
         <div>
