@@ -8,6 +8,7 @@ import supabase from "../helper/supabaseClient";
     
     const [email, setEmail] = useState(null);
 
+    //Fetch user from supabase to display on website header
     useEffect(() => {
         const fetchUser = async () => {
             const { data} = await supabase.auth.getUser();

@@ -7,7 +7,7 @@ function Nav(){
 
     
 
-
+    //Front-end code for website navigation bar
     return (
         <div class="nav-body">
             <nav>

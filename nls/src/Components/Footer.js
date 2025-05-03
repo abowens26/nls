@@ -3,6 +3,8 @@ import "./Footer.css"
 
 
 function Footer() {
+
+    //Front-end code for website Footer
  return (
     <div class="header">
         <div class="contact-container">
