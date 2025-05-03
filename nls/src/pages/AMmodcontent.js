@@ -4,6 +4,7 @@ import "./GImodcontent.css"
 import { NavLink } from "react-router-dom"
 import Footer from "../Components/Footer"
 function AMModContent () {
+    //Front-end code for the anger management module content displaying the video for users
     return (
         <div>
             < Header />

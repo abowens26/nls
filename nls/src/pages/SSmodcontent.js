@@ -4,6 +4,8 @@ import "./GImodcontent.css"
 import { NavLink } from "react-router-dom"
 import Footer from "../Components/Footer"
 function SSModContent () {
+
+    //Front-end code for the social skills module content. This will show the presentation for the users
     return (
         <div>
             < Header />

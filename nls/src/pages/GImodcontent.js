@@ -4,6 +4,7 @@ import "./GImodcontent.css"
 import { NavLink } from "react-router-dom"
 import Footer from "../Components/Footer"
 function GIModContent () {
+    //Front-end code for the module content. This will display the presentation 
     return (
         <div>
             < Header />

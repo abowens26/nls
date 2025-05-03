@@ -10,7 +10,8 @@ import supabase from "../helper/supabaseClient";
 
 
     const[recoverStatus, setRecoverStatus] = useState('');
-   
+
+//User can press the enter button on keyboard to reset password
 useEffect(() => {
 
         let btn = document.getElementById("recover");
@@ -30,7 +31,7 @@ useEffect(() => {
     }, []);
 
     
-
+    //Reset password functionality and navigates user to the password recovery page via email
     const resetPassword = async() => {
         const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
             redirectTo: "https://nls-topaz.vercel.app/PasswordRecovery",

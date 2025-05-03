@@ -6,7 +6,7 @@ import "./Landing.css"
 
 
 
-
+//Landing page for when user first accesses the public URL for the application
 function Landing() {
   
       

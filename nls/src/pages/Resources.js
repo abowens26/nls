@@ -41,7 +41,7 @@ function Resources() {
         document.getElementById("anxiety").classList.toggle("show1");
     }
 
-
+    //Front-end code for additional resources page and coping strategies list
     return (
         <div>
             <Header />

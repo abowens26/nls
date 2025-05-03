@@ -3,6 +3,8 @@ import "./GIModIntro.css"
 import { NavLink } from "react-router-dom";
 import Footer from "../Components/Footer";
 function GIModIntro() {
+
+    //Front-end code for the G.R.O.U.P Module Introduction
     return (
         <div>
             <Header />

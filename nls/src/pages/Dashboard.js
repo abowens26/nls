@@ -117,7 +117,7 @@ function Dashboard() {
 
 
 
-
+//Front end code for the Application's dashboard for the user 
     return (
 
         <div class="body">

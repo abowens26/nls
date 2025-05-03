@@ -15,9 +15,9 @@ import { useNavigate } from "react-router-dom";
 
 
     
-
+    //Reset password functionality
     const resetPassword = async() => {
-
+        //Update user password
         const { data, error } = await supabase.auth.updateUser({
             password: new_password
           })
@@ -28,7 +28,7 @@ import { useNavigate } from "react-router-dom";
             console.log(error.message)
             return;
           }
-
+          //If new password equals the confirmed passowrd, reset user password 
           if (data && new_password === confirm_password) {
             setRecoverStatus("Password successfully reset!")
             navigate("/")
@@ -37,7 +37,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-
+//Front-end code for account recovery
     return (
 
 

@@ -2,7 +2,7 @@ import Header from "../Components/Header"
 import './SSmod.css'
 import { NavLink } from "react-router-dom"
 
-
+//Front-end code for social skills module
 function SSmod() {
     return (
         <div>

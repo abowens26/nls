@@ -4,7 +4,7 @@ import Nav from "../Components/Nav"
 import { NavLink } from "react-router-dom"
 import Footer from "../Components/Footer"
 
-//Welcome page of the application
+//Front-end code for the welcome page of the application
 function Welcome() {
     return (
         <div>

@@ -3,6 +3,8 @@ import "./GIModIntro.css"
 import { NavLink } from "react-router-dom";
 import Footer from "../Components/Footer";
 function SSModIntro() {
+
+    //Front-end code for the social skills module introduction 
     return (
         <div>
             <Header />

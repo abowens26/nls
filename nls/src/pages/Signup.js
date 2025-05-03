@@ -57,7 +57,7 @@ function SignUp() {
 
 
    
-
+//Front-end code for the sign-up functionality
     return (
 
 

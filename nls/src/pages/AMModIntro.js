@@ -3,6 +3,7 @@ import "./GIModIntro.css"
 import { NavLink } from "react-router-dom";
 import Footer from "../Components/Footer";
 function AMModIntro() {
+    //Code for the Anger Management Module Video this is just information of what the module has to offer.
     return (
         <div>
             <Header />

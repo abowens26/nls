@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom"
 
 
 function GiMod() {
+
+       //Front-end code for the G.R.O.U.P introduction portal
     return (
         <div>
         <Header />
