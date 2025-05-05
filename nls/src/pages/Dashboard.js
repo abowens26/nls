@@ -207,8 +207,37 @@ function Dashboard() {
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Student Progress Through Each Skill',
+                            text: 'Student Progress Through Each Module',
+                            font: {
+                                size: 24,
+                            }
                         }
+                    },
+                    scales: {
+                        y: {  
+                            max: 100,
+                        title: {
+                            display: true,
+                            text: "Score",
+                            font: {
+                                size: 20,
+                                weight: "bold",
+                            }
+                        },
+
+                        },
+
+                        x: {
+                            title: {
+                                display: true,
+                                text: "Modules",
+                                font: {
+                                    size: 20,
+                                    weight: "bold",
+                                }
+                            }
+                        }
+                      
                     },
 
                 }}
