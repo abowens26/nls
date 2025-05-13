@@ -91,6 +91,11 @@ function GIModIntro() {
             <div class="paragraph">
                 <p>Build positive connections with others</p>
             </div>
+            
+            <div class="nextbtncontainer">
+                 <NavLink exact to="/GIModContent"> <button class="back-dashboard back nextpage">Navigate to Module Content</button></NavLink>
+            </div>
+           
 
 
 

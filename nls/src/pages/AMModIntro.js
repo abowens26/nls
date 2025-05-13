@@ -82,7 +82,9 @@ function AMModIntro() {
                 <p>Apply techniques through role-playing challenging scenarios in a supportive environment. Group members share successful coping experiences and provide mutual support.</p>
             </div>
 
-
+            <div class="nextbtncontainer">
+                 <NavLink exact to="/AMModContent"> <button class="back-dashboard back nextpage">Navigate to Module Content </button></NavLink>
+            </div>
 
 
 

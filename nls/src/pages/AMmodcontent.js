@@ -15,7 +15,10 @@ function AMModContent () {
             <div class="content-p">
                 <p>Please wait for the video to fully load before viewing it at your own pace.</p>
             </div>
-             
+        
+            <div class="nextbtncontainer">
+                 <NavLink exact to="/AmTest"> <button class="back-dashboard back nextpage">Navigate to Quiz </button></NavLink>
+            </div>
         <div class="ppt-container">
         <iframe 
         id="ppt"

@@ -74,6 +74,10 @@ function SSModIntro() {
                 <p>Developing the ability to understand and share the feelings of others</p>
             </div>
 
+            <div class="nextbtncontainer">
+                 <NavLink exact to="/SSModContent"> <button class="back-dashboard back nextpage">Navigate to Module Content </button></NavLink>
+            </div>
+
 
 
 

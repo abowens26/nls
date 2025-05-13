@@ -9,13 +9,16 @@ function GIModContent () {
         <div>
             < Header />
             <NavLink exact to="/GIMod"> <button class="back-dashboard back" id="back">Back to Module Home</button></NavLink>
+             
             <div class="content-title">
                  <h1>G.R.O.U.P Introduction Presentation</h1>
             </div>
             <div class="content-p">
                 <p>Please wait for the presentation to load, then review the slides at your own pace.</p>
             </div>
-             
+         <div class="nextbtncontainer">
+                 <NavLink exact to="/GITest"> <button class="back-dashboard back nextpage">Navigate to Quiz</button></NavLink>
+            </div>    
         <div class="ppt-container">
     
          <iframe 
@@ -28,6 +31,8 @@ function GIModContent () {
         loading="eager">
         </iframe> 
          </div>
+
+        
 
          < Footer />
         </div>

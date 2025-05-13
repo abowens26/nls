@@ -16,6 +16,9 @@ function SSModContent () {
             <div class="content-p">
                 <p>Please wait for the presentation to load, then review the slides at your own pace.</p>
             </div>
+            <div class="nextbtncontainer">
+                 <NavLink exact to="/Test"> <button class="back-dashboard back nextpage">Navigate to Quiz </button></NavLink>
+            </div>
              
         <div class="ppt-container">
         <iframe 

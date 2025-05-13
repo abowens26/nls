@@ -199,6 +199,9 @@ function Dashboard() {
                         {
                             label: "Test Score",
                             data: [scoreGI?.score , score?.score, scoreAm?.score],
+                            backgroundColor: "rgba(185, 229, 230, 1)",
+                            hoverBackgroundColor: "rgba(161, 202, 246, 1)",
+                            
                         },
                     ]
                 }}
@@ -210,7 +213,8 @@ function Dashboard() {
                             text: 'Student Progress Through Each Module',
                             font: {
                                 size: 24,
-                            }
+                            },
+                            color: 'Black'
                         }
                     },
                     scales: {
@@ -222,7 +226,8 @@ function Dashboard() {
                             font: {
                                 size: 20,
                                 weight: "bold",
-                            }
+                            },
+                            color: 'Black'
                         },
 
                         },
@@ -234,7 +239,8 @@ function Dashboard() {
                                 font: {
                                     size: 20,
                                     weight: "bold",
-                                }
+                                },
+                                color: 'black'
                             }
                         }
                       

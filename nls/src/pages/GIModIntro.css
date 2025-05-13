@@ -20,6 +20,20 @@
     line-height: 1.8;
 }
 
+.nextpage {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color:  rgba(185, 229, 230, 1);
+    padding: 20px
+}
+
+
+.nextbtncontainer {
+    display: flex;
+    justify-content: center;
+}
 
 @media (max-width: 768px) {
 
