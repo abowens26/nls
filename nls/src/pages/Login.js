@@ -8,12 +8,14 @@ import { useNavigate } from "react-router-dom";
 
 
 function Login() {
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     const[loginStatus, setLoginStatus] = useState('');
     const navigate = useNavigate();
     
+    //enables user to press enter button to activate the Submit() function 
     useEffect(() => {
 
         let btn = document.getElementById("submit");
