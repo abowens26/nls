@@ -7,6 +7,7 @@ app.use(cors());
 
 //Import testscore schema from models.js
 const TestScore = require('./models.js')
+//Port port stored in .env if cannot access, just open in port 4001
 const port = process.env.PORT || 4001;
 app.use(express.json());
 //Connect to mongoDB database
@@ -34,17 +35,6 @@ app.get('/api/score', async (req, res) => {
 
   try {
     const Score = await TestScore.findOne({user, testname}).sort({createdAt: -1});
-    res.status(200).json(Score);
-  } catch (error) {
-    res.status(500).json({message: error.message});
-  }
-})
-
-app.get('/api/score/:user', async (req, res) => {
-  const user = req.params.user
-  
-  try {
-    const Score = await TestScore.find({user}).sort({createdAt: -1});
     res.status(200).json(Score);
   } catch (error) {
     res.status(500).json({message: error.message});
