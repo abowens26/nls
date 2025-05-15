@@ -30,7 +30,6 @@ useEffect(() => {
 /*Initialize question and option variables */
  const[currentQuestion, setCurrentQuestion] = useState(0)
 const[optionChosen, setOptionChosen] = useState("")
-const Giheader = [" G.R.O.U.P Introduction Presentation", "G.R.O.U.P Introduction Quiz"]
 const progress = (currentQuestion / questionbank3.length) * 100;
 
 /*Show and hide elements when module starts */

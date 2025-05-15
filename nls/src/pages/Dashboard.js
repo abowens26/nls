@@ -34,7 +34,7 @@ function Dashboard() {
     }, []);
 
 
-
+//Fetch score for Social Skills Test for user
     useEffect(() => {
      
         const fetchScore = async () => {
@@ -54,7 +54,7 @@ function Dashboard() {
     }, [email])
 
 
-    
+    //Fetch score for G.R.O.U.P Introduction for user 
     useEffect(() => {
      
         const fetchGIScore = async () => {
@@ -73,6 +73,8 @@ function Dashboard() {
         fetchGIScore();
     }, [email])
 
+
+    //Fetch score from Anger Management for user 
     useEffect(() => {
        
         const fetchAmScore = async () => {
