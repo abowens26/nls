@@ -22,7 +22,7 @@ function Dashboard() {
 
     })
 
-
+// 
     useEffect(() => {
         const fetchUser = async () => {
             const { data } = await supabase.auth.getUser();
