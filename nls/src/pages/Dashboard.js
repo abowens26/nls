@@ -17,12 +17,8 @@ function Dashboard() {
     const [scoreGI, setScoreGI] = useState(null);
     const [scoreAm, setScoreAm] = useState(null);
 
-    useEffect(() => {
-        console.log('render')
 
-    })
-
-// 
+// Fetch user email
     useEffect(() => {
         const fetchUser = async () => {
             const { data } = await supabase.auth.getUser();
